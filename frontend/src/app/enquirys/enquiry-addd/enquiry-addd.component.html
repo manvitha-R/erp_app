@@ -1,0 +1,370 @@
+<div class="py-10">
+  <div class="container">
+      <div class="row justify-content-center">
+  
+          <div class="col-md-18">
+      
+             <div class="card shadow">
+        
+              <div class="card-header">
+                  <h2 class="text-center">-- Enquiry --</h2>
+              </div>
+              <div class="card-body">
+                <form  [formGroup]="addenquiry" novalidate class="form">
+
+                  <div class="row">
+                    <div class="col-md-4">
+                  <div class="form-group mb-4">
+                  <label for="enq_on">Enquiry No.</label>
+                  <input  formControlName="enq_on"  id="enq_on"  class="form-control">
+                  </div>
+                  </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-8">
+                  <div class="form-group mb-4">
+                  <label for="enq_cust_name">Customer Name</label>
+                  <select  formControlName="enq_cust_name" id="enq_cust_name" class="form-control">
+
+                    //should pull dropdown from customer master
+                      <option>Modern Manufacturing Co.</option>
+                      <option>Innovative Industries Inc.</option>
+                      <option>Reliance Steel & Aluminum Co.</option>
+                      <option>Maruti Suzuki Limited.</option>
+                      <option>Larsent & Toubro Limited.</option>
+                    </select>
+                  </div>
+                  </div>
+                  </div>
+<div class="row">
+   <div class="col-md-4">
+                  <div class="form-group mb-4">
+                    <label for="enq_type">Enquiry Type</label>
+                    <select  formControlName="enq_type" id="enq_type" class="form-control">
+  
+                      <!-- //should pull dropdown from customer master -->
+                        <option>Services</option>
+                        <option>Manufacturing</option>
+                        <option>Trading</option>
+                        <option>Sales</option>
+                        <option>Retail</option>
+                     
+                
+                      </select>
+                  
+                  </div>
+                  
+                  </div>
+
+
+  <div class="col-md-4">
+<div class="form-group mb-4">
+<label for="enq_date">Enquiry Date</label>
+<input type="date" id="enq_date" formControlName="enq_date" class="form-control">
+
+</div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+
+  <div class="col-md-4">
+                 <div class="form-group mb-4">
+                   <label for="enq_by">Enquiry By</label>
+                   <select  formControlName="enq_by" id="enq_by" class="form-control">
+                    <option>E-mail</option>
+                    <option>Message</option>
+                    <option>Oral</option>
+                    //should pull dropdown from employee-master
+                    <!-- <option>Sales</option>
+                    <option>Retail</option> -->
+                    </select>
+                 
+                 </div>
+                 
+                 </div>
+
+
+ <div class="col-md-4">
+<div class="form-group mb-4">
+<label for="enq_reference">Referred By</label>
+<input type="text" formControlName="enq_reference" id="enq_reference" class="form-control">
+  <!-- <option>Amount</option>
+  <option>Qty</option> -->
+
+
+
+
+</div>
+</div>
+</div>
+<div class="row">
+
+  <div class="col-md-4">
+                 <div class="form-group mb-4">
+                   <label for="enq_sales_co_ord">Sales Co-ordinator</label>
+                   <select  formControlName="enq_sales_co_ord" id= "enq_sales_co_ord" class="form-control">
+                    <option>E-mail</option>
+                    <option>Message</option>
+                    <option>Oral</option>
+                    //should pull dropdown from employee-master
+                    <!-- <option>Sales</option>
+                    <option>Retail</option> -->
+                    </select>
+                 
+                 </div>
+                 
+                 </div>
+
+
+ <div class="col-md-4">
+<div class="form-group mb-4">
+<label for="status">Enquiry Status</label>
+<select  formControlName="status" id="status" class="form-control">
+  <!-- //pull dropdown from status master -->
+  <option>Quotable</option>
+  <option>Not Quotable</option>
+
+
+</select>
+
+</div>
+</div>
+</div>
+
+
+<button (click)="Openpopup()"  class="btn btn-primary">Pull From Item</button><br>
+<hr>
+<div class="outer-wrapper">
+<div class="table-wrapper">
+<table class="table table-bordered ">
+  <thead class="text-center">
+    <tr>
+    <th>Model #</th>
+    <th>Item Name</th>
+    <th>Item Description</th>
+    <th>Item Balance</th>
+    <th>Item Code</th>
+    <th>Item Sequence</th>
+    <th>HSN Code</th>
+    <th>Unit</th>
+    <th>Quantity</th>
+    <th>MRP</th>
+    <th>Rate</th>
+    <th>Amount</th>
+    <th>Eff.Rate</th>
+    <th>Eff. Value</th>
+    <th>Net Rate</th>
+    <th>Discount Rate</th>
+   <th>Discount Value</th>
+    <th>Tax Code</th>
+    <th>Taxable</th>
+    <th>Tax Rate</th>
+    <th>Tax Amount</th>
+    <th>IGST</th>
+    <th>CGST</th>
+    <th>SGST</th>
+    <th>Cess Calculation</th>
+    <th>Installation Req.</th>
+    <th>Posting GL</th>
+    <th>Lead Time</th>
+    <th>Make</th>
+    <th>Markup</th>
+    <th>Markup%</th>
+    <th>Sales Rate</th>
+    <th>Warranty Months</th>
+    <!-- <th>Action</th> -->
+      <!-- <th>Item Name</th>
+      <th>Code</th>
+      <th>HSN Code</th>
+      <th>Model #</th>
+      <th>Category Name</th>
+      <th>Type</th> -->
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let item of getSelectedItems(); let i = index" class="text-center" >
+    
+    
+          <!-- Display item details as needed -->
+          <td>
+            <!-- {{item.item_model_no}} -->
+            <input type="text"  [value]="item.item_model_no"> 
+          </td>
+           <td>
+            <!-- {{item.item_name}} -->
+             <input type="text" [value]="item.item_name">
+          </td>
+           <td>
+            <!-- {{item.item_desc}} -->
+             <input type="text" [value]="item.item_desc"> 
+          </td>
+            <td>
+              <!-- {{item.item_balance}} -->
+              <input type="text" [value]="item.item_balance">
+            </td>
+            <td>
+              <!-- {{item.item_code}} -->
+              <input type="text" [value]="item.item_code">
+            </td>
+            <td>
+              <!-- {{item.item_seq}} --> 
+              <input type="text" [value]="item.item_seq">
+            </td>
+            <td>
+              <!-- {{item.item_hsn_code}} -->
+              <input type="text" [value]="item.item_hsn_code">
+            </td>
+            <td>
+              <!-- {{item.item_unit}} -->
+              <input type="text" [value]="item.item_unit">
+            </td>
+            <td>
+              <!-- {{item.item_qty}} -->
+              <input type="text" [value]="item.item_qty"> 
+            </td>
+            <td>
+              <!-- {{item.item_mrp}} -->
+              <input type="text" [value]="item.item_mrp">
+            </td>
+            <td>
+              <!-- {{item.item_rate}} -->
+              <input type="text" [value]="item.item_rate">
+            </td>
+            <td>
+              <!-- {{item.item_amount}} -->
+              <input type="text"  [value]="item.item_amount">
+            </td>
+            <td>
+              <!-- {{item.item_eff_rate}} -->
+              <input type="text"  [value]="item.item_eff_rate">
+            </td>
+            <td>
+              <!-- {{item.item_eff_value}} -->
+              <input type="text" [value]="item.item_eff_value">
+            </td>
+            <td>
+              <!-- {{item.item_net_rate}} -->
+              <input type="text"  [value]="item.item_net_rate">
+            </td>
+            <td>
+              <!-- {{item.item_disc}} -->
+              <input type="text" [value]="item.item_disc">
+            </td>
+           <td>
+            <!-- {{item.item_disc_value}} -->
+            <input type="text" [value]="item.item_disc_value">
+          </td> 
+            <td>
+              <!-- {{item.item_tax_code}} -->
+              <input type="text"  [value]="item.item_tax_code" >
+            </td>
+            <td>
+              <!-- {{item.item_taxable}} -->
+              <input type="text" [value]="item.item_taxable">
+            </td>
+            <td>
+              <!-- {{item.item_tax_rate}} -->
+              <input type="text"  [value]="item.item_tax_rate">
+            </td>
+            <td>
+              <!-- {{item.item_tax_amt}} -->
+              <input type="text" [value]="item.item_tax_amt">
+            </td>
+            <td>
+            <!-- {{item.item_igst}} -->
+              <input type="text" [value]="item.item_igst">
+            </td>
+            <td>
+              <!-- {{item.item_cgst}} -->
+              <input type="text" [value]="item.item_cgst">
+            </td>
+            <td>
+              <!-- {{item.item_sgst}} -->
+              <input type="text"  [value]="item.item_sgst">
+            </td>
+            <td>
+              <!-- {{item.item_cess_calc}} -->
+         
+               <input type="text" [value]="item.item_cess_calc"> 
+          </td>
+            <td>
+              <!-- {{item.item_install_req}} -->
+               <input type="text" [value]="item.item_install_req"> 
+            </td>
+            <td>
+              <!-- {{item.item_posting_gl}} -->
+              <input type="text" [value]="item.item_posting_gl">
+            </td>
+                <!-- {{item.item_lead_time}} -->
+                 <td>
+                  <input type="text" [value]="item.item_lead_time"> 
+              </td>
+              <td>
+                <!-- {{item.item_make}} -->
+                <input type="text" [value]="item.item_make">
+              </td>
+              <td>
+                <!-- {{item.item_markup}} -->
+                <input type="text" [value]="item.item_markup">
+              </td>
+              <td>
+                <!-- {{item.item_markup_per}} -->
+                 <input type="text"  [value]="item.item_markup_per"> 
+              </td>
+              <td>
+                <!-- {{item.item_sales_rate}} -->
+                <input type="text"  [value]="item.item_sales_rate">
+              </td>
+              <td>
+                <!-- {{item.item_war_months}} -->
+                <input type="text" [value]="item.item_war_months">
+              </td> 
+
+              <td>
+                <button class="btn btn-danger" (click)="deleteItem(i)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+              <!-- <td>
+                <a href="popup_test/{{item._id}}"><mat-icon>edit</mat-icon></a> 
+              </td> -->
+          <!-- <td>{{item.item_name}}</td>
+          <td>{{item.item_code}}</td>
+          <td>{{item.item_hsn_code}}</td>
+          <td>{{item.item_model_no}}</td>
+          <td>{{item.item_cat}}</td>
+          <td>{{item.item_type}}</td> -->
+          
+  </tbody>
+  
+</table>
+
+</div>
+
+</div>
+
+<br>
+
+
+  <div class="from-group text-center">
+    
+    <button type="submit" (click)="onSubmit()"  class="btn btn-success">Save</button>&nbsp;
+    <!-- <button type="submit" (click)="onClick()"  class="btn btn-primary" >Edit Item</button>&nbsp; -->
+    <!-- <a *ngFor="let item of getSelectedItems()" class="btn btn-primary" href="/popup_test/{{item._id}}">Edit</a> -->
+
+    <a class="btn btn-danger" href="enquiry-listt" >Cancel</a>
+    
+  </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

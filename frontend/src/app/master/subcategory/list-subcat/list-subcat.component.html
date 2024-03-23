@@ -1,0 +1,77 @@
+
+
+  
+  <div class="container mt-5">
+
+
+
+
+    <div class="row">
+    <div class="col-md-11" >
+     
+ 
+          <div class="card ">
+ 
+             <div class="card-header">
+              
+                <h2 class="text-center"> -- SUB-CATEGORY LIST --</h2>
+                <h4>
+                   <a href="add-subcat" class="btn btn-primary float-end">Add Sub-Category</a>&nbsp;
+                 </h4>
+                 <br>
+                 <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+              
+             </div>
+             
+ 
+             <div class="card-body">
+            
+ 
+                <form action="code1.php" method="POST">
+                    
+ 
+                   <table class="table table-bordered table-striped">
+ 
+                      <thead class="text-center">
+                         <tr>
+                       
+ 
+                            <th>Sub-Category Name</th>
+                           <th>Sub-Category Description</th>
+                            <th>Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         
+                        <tr>
+                           <tr *ngFor="let subcat of subcategorys | search: searchText" class="text-center">
+                               <td>{{subcat.subcategory_name}}</td>
+                               <td>{{subcat.subcategory_desc}}</td>
+                              
+                               <td>
+                                 <a href="edit-subcat/{{subcat._id}}">
+                                   <mat-icon>edit</mat-icon></a> &nbsp;
+                 
+                                
+  
+                                     <a (click)=" softRoles(subcat)">
+                                      <mat-icon>delete</mat-icon></a>
+                                 </td>
+                           </tr>
+
+ 
+                       
+ 
+                         
+ 
+                      </tbody>
+ 
+                   </table>
+                </form>
+ 
+ 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

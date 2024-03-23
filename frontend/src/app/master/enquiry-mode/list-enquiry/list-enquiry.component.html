@@ -1,0 +1,77 @@
+
+
+  
+  <div class="container mt-5">
+
+
+
+
+    <div class="row">
+    <div class="col-md-11" >
+     
+ 
+          <div class="card ">
+ 
+             <div class="card-header">
+              
+                <h2 class="text-center"> -- ENQUIRY MODE LIST --</h2>
+                <h4>
+                   <a href="add-enquiry" class="btn btn-primary float-end">Add Enquiry Mode</a>&nbsp;
+                 </h4>
+                 <br>
+ 
+                 <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+             </div>
+             
+ 
+             <div class="card-body">
+            
+ 
+                <form action="code1.php" method="POST">
+                    
+ 
+                   <table class="table table-bordered table-striped">
+ 
+                      <thead class="text-center">
+                         <tr>
+                       
+ 
+                            <th>Enquiry Mode Name</th>
+                           <th> Enquiry Mode Description</th>
+                            <th>Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         
+                        <tr>
+                           <tr *ngFor="let mode of enquiry_mode | search : searchText" class="text-center">
+                               <td>{{mode.enq_mode_name}}</td>
+                               <td>{{mode.enq_mode_desc}}</td>
+                              
+                               <td>
+                                 <a href="edit-enquiry/{{mode._id}}">
+                                   <mat-icon>edit</mat-icon></a> &nbsp;
+                 
+                                
+  
+                                     <a (click)=" softRoles(mode)">
+                                      <mat-icon>delete</mat-icon></a>
+                                 </td>
+                           </tr>
+
+ 
+                       
+ 
+                         
+ 
+                      </tbody>
+ 
+                   </table>
+                </form>
+ 
+ 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

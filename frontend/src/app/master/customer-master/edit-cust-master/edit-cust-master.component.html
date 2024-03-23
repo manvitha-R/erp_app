@@ -1,0 +1,270 @@
+
+<div class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+    
+            <div class="col-md-6">
+        
+               <div class="card shadow">
+          
+                <div class="card-header text-center">
+                    <h2> Update Customer Master</h2>
+                </div>
+                <div class="card-body">
+                  <form  [formGroup]="addcustomer" novalidate class="form">
+  
+                    <div class="row">
+                      <div class="col-md-5">
+                    <div class="form-group mb-3">
+                    <label for="">Customer Name</label>
+                    <input type="text" formControlName="cust_name" class="form-control">
+                    
+                    </div>
+                    </div>
+                    <!-- <div class="col-md-5">
+                    <div class="form-group mb-3">
+                      <label for="">Pan Number</label>
+                      <input type="email" formControlName="pan_number" class="form-control">
+                    
+                    </div>
+                    
+                    </div> -->
+                    </div>
+  <div class="row">
+    <div class="col-md-5">
+  <div class="form-group mb-3">
+  <label for="">Customer Phone</label>
+  <input type="text" formControlName="cust_phn" class="form-control">
+  
+  </div>
+  </div>
+  <div class="col-md-5">
+  <div class="form-group mb-3">
+    <label for="">Customer Email</label>
+    <input type="email" formControlName="cust_email" class="form-control">
+  
+  </div>
+  
+  </div>
+  </div>
+  
+  
+  <div class="row">
+    <div class="col-md-5">
+  <div class="form-group mb-3">
+  <label for="">Customer GST NO</label>
+  <input type="text" formControlName="cust_gst_number" class="form-control">
+  
+  </div>
+  </div>
+  <div class="col-md-5">
+  <div class="form-group mb-3">
+    <label for="">Customer CIN NO</label>
+    <input type="email" formControlName="cust_cin_number" class="form-control">
+  
+  </div>
+  
+  </div>
+  </div>
+  
+  
+  <div class="row">
+    <div class="col-md-5">
+  <div class="form-group mb-3">
+  <label for="">Address</label>
+  <textarea   type="address" formControlName="address" class="form-control" ></textarea>
+  
+  </div>
+  </div>
+  <!-- <div class="col-md-5">
+  <div class="form-group mb-3">
+    <label for="">Pan Number</label>
+    <input type="email" formControlName="pan_number" class="form-control">
+  
+  </div>
+  
+  </div> -->
+  </div>
+  
+  <div class="row">
+    <div class="col-md-5">
+  <div class="form-group mb-3">
+  <label for="">City</label>
+  <input   type="city" value="" formControlName="city" class="form-control">
+  
+  </div>
+  </div>
+  <div class="col-md-5">
+  <div class="form-group mb-3">
+    <label for="">State</label>
+    <input   value="" type="state" formControlName="state" class="form-control" />
+  
+  </div>
+  
+  </div>
+  </div>
+  
+  
+  <div class="row">
+    <div class="col-md-5">
+  <div class="form-group mb-3">
+  <label for="">Country</label>
+  <input   value="" type="country" formControlName="country" class="form-control" />
+  
+  </div>
+  </div>
+  <div class="col-md-5">
+  <div class="form-group mb-3">
+    <label for="">Pin Code</label>
+    <input  maxlength="6" type="pincode"  formControlName="pincode" class="form-control" >
+            
+  
+  </div>
+  
+  </div>
+  </div>
+  <!--      
+  <div class="col-md-6" style="border-left: 1px solid blue"> -->
+         
+    <mat-checkbox class="example-margin" #checkbox (change)="temp(checkbox.checked)"> Address Same As Above </mat-checkbox>
+    <div class="row">
+      <div class="col-md-5">
+    <div class="form-group mb-3">
+    <label for="">Address</label>
+    <textarea  formControlName="tempAddress" class="form-control" ></textarea>
+    
+    </div>
+    </div>
+    <!-- <div class="col-md-5">
+    <div class="form-group mb-3">
+      <label for="">Pan Number</label>
+      <input type="email" formControlName="pan_number" class="form-control">
+    
+    </div>
+    
+    </div> -->
+    </div>
+    
+    <div class="row">
+      <div class="col-md-5">
+    <div class="form-group mb-3">
+    <label for="">City</label>
+    <input   type="tempCity" formControlName="tempCity" class="form-control" value="" />
+  
+    
+    </div>
+    </div>
+    <div class="col-md-5">
+    <div class="form-group mb-3">
+      <label for="">State</label>
+      <input   type="tempState" formControlName="tempState" class="form-control" value="" />
+  
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-md-5">
+    <div class="form-group mb-3">
+    <label for="">Country</label>
+    <input   type="tempCountry" formControlName="tempCountry" class="form-control">
+    
+    </div>
+    </div>
+    <div class="col-md-5">
+    <div class="form-group mb-3">
+      <label for="">Pin Code</label>
+      <input   type="tempPincode" formControlName="tempPincode" class="form-control"value=""   />
+              
+    
+    </div>
+    
+    </div>
+    </div>
+     
+    <div class="from-group text-center">
+      <button type="submit" (click)="onSubmit()" class="btn btn-success">Update</button>&nbsp;
+      <a class="btn btn-danger" href="list-customer" >Cancel</a>
+      <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+    </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+    <!-- </div>      -->
+  <!--         
+      <div class="row">    
+                <label> Address</label>
+                <textarea  placeholder="Ex. Enter the Address Here" type="address" formControlName="address" class="form-control" ></textarea>
+                
+             
+          
+      
+                <label>country </label>
+                <input  placeholder="Ex. Karnataka" value="" type="country" formControlName="country" class="form-control" />
+            
+            
+      
+       
+                <label>City </label>
+                <input  placeholder="Ex. Bangalore" type="city" value="" formControlName="city" class="form-control">
+              
+               
+       
+      
+           
+                <label>Pin Code</label>
+                <input  placeholder="Ex. 560031" maxlength="6" type="pincode"  formControlName="pincode" class="form-control" >
+            
+        </div>
+      
+      
+        <div class="col-md-6" style="border-left: 1px solid blue">
+         
+          <mat-checkbox class="example-margin" #checkbox (change)="temp(checkbox.checked)"> Address Same As Above </mat-checkbox>
+          
+                <label> Address</label>
+                <textarea  placeholder="Ex. Enter the Address Here" formControlName="tempAddress" class="form-control" ></textarea>
+                
+              
+         
+      
+  
+                <label>country </label>
+                <input  placeholder="Ex. Karnataka" type="tempCountry" formControlName="tempCountry" class="form-control">
+               
+  
+      
+          
+              <label>City </label>
+                <input  placeholder="City" type="tempCity" formControlName="tempCity" class="form-control" value="" />
+  
+      
+  
+                <label>pincode</label>
+                <input  placeholder="Pincode" type="tempPincode" formControlName="tempPincode" class="form-control"value=""   />
+              
+            
+      
+              
+  
+            
+  
+        <div style="text-align: center; margin-top: 10px;">
+          <button type="button" mat-raised-button color="warn" >Close</button>
+          <button type="submit"  mat-raised-button color="primary" style="margin-left: 15px;" >Save</button>
+      
+          
+        </div>
+      
+     
+  </div> -->
+  
+  
+      

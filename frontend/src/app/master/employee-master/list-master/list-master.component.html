@@ -1,0 +1,82 @@
+<div class="container mt-5">
+
+
+
+
+    <div class="row">
+    <div class="col-md-11" >
+     
+ 
+          <div class="card ">
+ 
+             <div class="card-header">
+              
+                <h2 class="text-center"> -- EMPLOYEE LIST --</h2>
+                <h4>
+                   <a href="add-master" class="btn btn-primary float-end">Add Employee</a>&nbsp;
+                 </h4>
+                 <br>
+ 
+                 <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+              
+             </div>
+             
+ 
+             <div class="card-body">
+            
+ 
+                <form action="code1.php" method="POST">
+                    
+ 
+                   <table class="table table-bordered table-striped">
+ 
+                      <thead class="text-center">
+                         <tr>
+                       
+ 
+                            <th>Employee Name</th>
+                           <th>Employee Country</th>
+                           <th>Employee City</th>
+                           <th>Employee Contact</th>
+                           <th>Employee Email</th>
+                            <th>Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         
+                        <tr>
+                           <tr *ngFor="let emp of employee | search: searchText" class="text-center">
+                               <td>{{emp.employee_name}}</td>
+                               <td>{{emp.country}}</td>
+                               <td>{{emp.city}}</td>
+                               <td>{{emp.phone_number}}</td>
+                               <td>{{emp.email}}</td>
+            
+                              
+                               <td>
+                                 <a href="edit-master/{{emp._id}}">
+                                   <mat-icon>edit</mat-icon></a> &nbsp;
+                 
+                                
+  
+                                     <a (click)=" softRoles(emp)">
+                                      <mat-icon>delete</mat-icon></a>
+                                 </td>
+                           </tr>
+
+ 
+                       
+ 
+                         
+ 
+                      </tbody>
+ 
+                   </table>
+                </form>
+ 
+ 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

@@ -1,0 +1,77 @@
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-md-11" >
+     
+ 
+          <div class="card ">
+ 
+             <div class="card-header">
+              
+                <h2 class="text-center"> --  FOLLOW-UP HISTORY --</h2>
+                <!-- <h4>
+                   <a href="enquiry-add" class="btn btn-primary float-end">Add Enquiry</a>&nbsp;
+                 </h4> -->
+                 <br>
+                 <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+              
+             </div>
+             
+ 
+             <div class="card-body">
+            
+ 
+                <form action="code1.php" method="POST">
+                    
+ 
+                   <table class="table table-bordered table-striped">
+ 
+                      <thead class="text-center">
+                         <tr>
+                            <th>Sl.No</th> 
+                            <th>Person Name</th>
+                            <th>Date</th>
+                            <th>Remarks</th>
+                            <th>Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                           <tr *ngFor="let his of history | search: searchText" class="text-center">
+                           
+                               <td>{{his.sl_no}}</td> 
+                               <td>{{his.person_name}}</td>
+                               <td>{{his.date}}</td>
+                               <td>{{his.remarks}}</td>
+                               <!-- <td>{{his.action}}</td> -->
+                               <td> 
+                                 <a (click)="softRoles(his)">
+                                    <mat-icon>delete</mat-icon></a>
+                                 </td>
+                              
+                                <!-- <td>
+                                
+                                    <select  formControlName="exec_amount" class="form-control">
+                                       <option >Taxable</option>
+                                       <option href="sale-exec">Bill Amount</option>
+                                    
+                               
+                                     </select>
+                                     &nbsp;
+                                </td> -->
+                               <!-- <td>
+                               <a href="edit-designation/{{desc._id}}" class="btn btn-success">Edit</a> &nbsp;
+               
+                                   <button (click)=" softRoles(desc)" class="btn btn-danger">Delete</button>
+                               </td> -->
+                           </tr>
+                      </tbody>
+                   </table>
+                   <div class="from-group text-center">
+                     <a class="btn btn-danger" href="list-followup" >Cancel</a>
+                    </div>
+                </form>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

@@ -1,0 +1,403 @@
+<div class="py-11">
+  <div class="container">
+      <div class="row justify-content-center">
+  
+          <div class="col-md-18">
+      
+             <div class="card shadow">
+        
+              <div class="card-header">
+                  <h2 class="text-center">-- Estimate --</h2>
+              </div>
+              <div class="card-body">
+                <form  [formGroup]="addestimate" novalidate class="form">
+                  
+                  <!-- <div  class="row">
+                    <div class="col-md-5">
+                      <div class="form-group mb-3">
+                        <label for=""> GST Number</label>
+                       
+                        <input type="text" formControlName="gst_num" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group mb-3">
+                    <button type="submit" class="btn btn-success">Fetch</button>
+                    </div>
+                    </div>
+                  </div> -->
+                  <div class="row">
+                      <div class="col-md-4">
+                    <div class="form-group mb-3">
+                      <label for=""><b>GST Category</b></label>
+                      <select id="gst_category" formControlName="est_gst_cat" class="form-control">
+                        <option>Taxlnvoice</option>
+                        <option>Export Bonded</option>
+                        <option>Export Non Bonded</option>
+                        <option>Ecommerce Supply</option>
+                        <option>Bill Of Supply</option>
+                        <option>Branch Transfer</option>
+  
+                      </select>
+                      
+                    </div>
+                    </div>
+
+                    <div class="col-md-8">
+                      <div class="form-group mb-3">
+                      <label for=""><b>Customer Name</b></label>
+                      <select type="text" formControlName="est_cust_name" class="form-control">
+                        <option>Modern Manufacturing Co.</option>
+                        <option>Innovative Industries Inc.</option>
+                        <option>Reliance Steel & Aluminum Co.</option>
+                        <option>Maruti Suzuki Limited.</option>
+                        <option>Larsent & Toubro Limited.</option>
+                        </select>
+                      
+                      </div>
+                      </div>
+                    </div>
+                  
+<!-- 
+                    <div class="row">
+                      <div class="col-md-5">
+                    <div class="form-group mb-3">
+                      <label for="">GST Category</label>
+                      <select id="gstCategory" formControlName="gst_cat" class="form-control">
+                        <option>Registered</option>
+                        <option>Unregistered</option>
+                        <option>Composition</option>
+                        <option>UIN_SEZ</option>
+                        <option>ExportHouse</option>
+                        <option>OverseasParty</option>
+  
+                      </select>
+                      
+                    </div>
+                    </div>
+                    <div class="col-md-5">
+                    <div class="form-group mb-3">
+                      <label for="">Contact Person Name</label>
+                      <input type="text" formControlName="cont_per_name" class="form-control">
+                      
+                    
+                    </div>
+                    
+                    </div>
+                    </div> -->
+                  <!-- <div class="row">
+                    <div class="col-md-5">
+                  <div class="form-group mb-3">
+                  <label for="">GST Category</label>
+                  <select id="gstCategory" formControlName="gst_cat" class="form-control">
+                    <option>Registered</option>
+                    <option>Unregistered</option>
+                    <option>Composition</option>
+                    <option>UIN_SEZ</option>
+                    <option>ExportHouse</option>
+                    <option>OverseasParty</option>
+
+                  </select>
+                  
+                  </div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <div class="form-group mb-3">
+                    <label for="">Customer Name</label>
+                    <input type="text" formControlName="cust_name" class="form-control">
+                    
+                    </div>
+                    </div>
+                  </div> -->
+
+                  <!-- <div class="row">
+                    <div class="col-md-5">
+                  <div class="form-group mb-3">
+                  <label for="">Customer Name</label>
+                  <input type="text" formControlName="cust_name" class="form-control">
+                  
+                  </div>
+                  </div> -->
+                  <!-- <div class="col-md-5">
+                  <div class="form-group mb-3">
+                    <label for="">Pan Number</label>
+                    <input type="email" formControlName="pan_number" class="form-control">
+                  
+                  </div>
+                  
+                  </div> -->
+                  <!-- </div> -->
+
+<div class="row">
+
+<div class="col-md-4">
+<div class="form-group mb-3">
+  <label for=""><b>Email Address</b></label>
+  <input type="email" formControlName="est_cust_email" class="form-control">
+
+</div>
+
+</div>
+  <div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Salesman</b></label>
+<select id="gst_salesman" formControlName="est_salesmen" class="form-control">
+  <option>Taxlnvoice</option>
+  <!-- <option>Export Bonded</option>
+  <option>Export Non Bonded</option>
+  <option>Ecommerce Supply</option>
+  <option>Bill Of Supply</option>
+  <option>Branch Transfer</option> -->
+
+</select>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+<div class="form-group mb-3">
+  <label for=""><b> Enquiry No</b></label>
+  <input type="text" formControlName="est_enq_number" class="form-control">
+
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>Enquiry Date</b></label>
+  <input type="date" formControlName="est_enq_date" class="form-control">
+
+
+</div>
+
+</div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4">
+<div class="form-group mb-3">
+  <label for=""><b> Estimate No</b></label>
+  <input type="text" formControlName="est_number" class="form-control">
+
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>Estimate Date</b></label>
+  <input type="date" formControlName="est_date" class="form-control">
+
+
+</div>
+
+</div>
+</div>
+<!-- <div class="col-md-4">
+  <div class="form-group mb-3">
+    <label for=""><b>Ref No</b></label>
+    <input type="text" formControlName="ref_number" class="form-control">
+  
+  </div>
+  
+  </div> -->
+
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group mb-3">
+                          <label for=""><b>Ref No</b></label>
+                          <input type="text" formControlName="est_ref_number" class="form-control">
+                        
+                        </div>
+                        
+                        </div>
+                      <div class="col-md-4">
+                    <div class="form-group mb-3">
+                      <label for=""><b>Ref Date</b></label>
+                      <input type="date" formControlName="est_ref_date" class="form-control">
+                      
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="form-group mb-3">
+                      <label for=""><b>Tax</b></label>
+                      <select id="gst_category" formControlName="est_tax" class="form-control">
+                          <option>Exclusive</option>
+                          <option>Inclusive</option>
+                          <!-- <option>Export Bonded</option>
+                          <option>Export Non Bonded</option>
+                          <option>Ecommerce Supply</option>
+                          <option>Bill Of Supply</option>
+                          <option>Branch Transfer</option> -->
+                      
+                        </select>
+                      
+                    
+                    </div>
+                    
+                    </div>
+                    </div>
+<!-- 
+<div class="col-md-5">
+  <div class="form-group mb-3">
+    <label for="">Customer PAN No</label>
+    <input type="email" formControlName="cust_pan_number" class="form-control">
+  
+  </div>
+  
+  </div> -->
+  <div>
+
+<!--      
+<div class="col-md-6" style="border-left: 1px solid blue"> -->
+</div>
+
+
+<button (click)="Openpopup()" class="btn btn-primary">Pull From Enquiry</button><br>
+   <hr>
+   <div class="outer-wrapper">
+   <div class="table-wrapper">
+   <table class="table table-bordered ">
+    <thead class="text-center">
+      <tr>
+        <th>Item Name</th>
+        <th>Code</th>
+        <th>HSN Code</th>
+        <th>Model #</th>
+        <th>Category Name</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let item of getSelectedItems()" class="text-center">
+      
+            <!-- Display item details as needed -->
+            <td>{{item.item_name}}</td>
+             <!-- <input type="text" formControlName="item_model_no" [value]="item.item_model_no" class="form-control"> -->
+            <td>{{item.item_code}}</td>
+            <td>{{item.item_hsn_code}}</td>
+            <td>{{item.item_model_no}}</td>
+            <td>{{item.item_cat}}</td>
+            <td>{{item.item_type}}</td>
+    
+        <!-- <tr *ngFor="let row of selectedRows" class="text-center">
+            <td>{{ row?.item_name }}</td>
+            <td>{{ row?.item_code }}</td>
+            <td>{{ row?.item_hsn_code }}</td>
+            <td>{{ row?.item_model_no }}</td>
+            <td>{{ row?.item_cat }}</td>
+            <td>{{ row?.item_type }}</td>
+          </tr> -->
+    </tbody> </table>
+</div>
+</div><br>
+
+
+
+  <div class="row">
+    <!-- <div class="col-md-12 text-center">
+     <h2>Add Student</h2>
+    </div>  -->
+    <div class="row">
+     
+      <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-3"><b>Item Value</b></div>
+       <div class="col-md-4">
+        <input type="text" formControlName="est_item_val" class="form-control">
+       </div>
+      </div>
+ 
+      <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-3"><b>Discount</b></div>
+       <div class="col-md-4">
+        <input type="text" formControlName="est_discount" class="form-control">
+       </div>
+      </div>
+ 
+      <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-3"><b>Cutting Charges</b></div>
+       <div class="col-md-4">
+        <input type="text" formControlName="est_cutting_chrgs" class="form-control">
+       </div>
+      </div>
+ 
+      <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-3"><b>Taxable</b></div>
+       <div class="col-md-4">
+        <input type="text" formControlName="est_taxable" class="form-control">
+       </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Tax Amount</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_tax_amt" class="form-control">
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Cess Amount</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_cess_amt" class="form-control">
+        </div>
+       </div>
+ 
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Additional discount</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_add_discount" class="form-control">
+        </div>
+       </div>
+ 
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Tcs</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_tcs" class="form-control">
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Round Off</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_roundoff" class="form-control">
+        </div>
+       </div><br>
+
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Doc Amount</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_doc_amt" class="form-control">
+        </div>
+       </div>
+   
+    
+ 
+    </div>
+ </div>
+<br>
+
+<!-- kjkksksk -->
+  <div class="from-group text-center">
+    <button type="submit" (click)="onSubmit()" class="btn btn-success">Save</button>&nbsp;
+    <a class="btn btn-danger" href="list-estimate" >Cancel</a>
+    <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+  </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <!-- </div>      -->

@@ -1,0 +1,143 @@
+<!-- <h1 >Roles List</h1>
+
+     
+                 <div class="card-header">
+                  
+                    <h3 class="text-center"> -- Membership Type Details --</h3>
+                    <h4>
+                       <a href="add-roles" class="btn btn-primary float-end">Add roles</a>
+                     </h4>
+     
+                  
+                 </div>
+                 
+
+      <table class="table table-bordered table-striped">
+        <thead >
+            <tr>
+          
+
+               <th>Member ID</th>
+              <th> Membership Type</th>
+               <th>Action</th>
+            </tr>
+         </thead>
+         <tbody>
+            
+
+            <tr>
+               <tr >
+                   <td></td>
+                   <td></td>
+                  
+                   <td>
+                   <a href="edit-roles/" class="btn btn-success">Edit</a> |
+   
+                       <button  class="btn btn-danger">Delete</button>
+                   </td>
+               </tr>
+
+
+
+
+
+          
+
+            
+
+         </tbody>
+      </table>
+      
+  -->
+
+
+  
+<div class="container mt-5">
+
+
+
+
+
+    <div class="row">
+    <div class="col-md-11" >
+     
+ 
+          <div class="card ">
+ 
+             <div class="card-header">
+              
+                <h2 class="text-center"> -- ROLES LIST --</h2>
+                <h4>
+                   <a href="add-roles" class="btn btn-primary float-end">Add Roles</a>&nbsp;
+                 </h4>
+                 <br>
+           
+          
+ 
+                 <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+             </div>
+             
+ 
+             <div class="card-body">
+            
+                <form action="code1.php" method="POST">
+                    
+ 
+                   <table class="table table-bordered table-striped">
+ 
+                      <thead class="text-center">
+                         <tr>
+                       
+ 
+                            <th>Role Name</th>
+                           <th> Role Description</th>
+                        
+                            <th>Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         
+ 
+                         <tr>
+                           <tr *ngFor="let role of roles | search: searchText" class="text-center" >
+                              <td>{{role.role_name}}</td>
+                              <td>{{role.role_desc}}</td>
+                              <!-- <td>{{role.role_role}}</td>
+                            -->
+                             
+                            <td>
+                              <a href="edit-roles/{{role._id}}">
+                                <mat-icon>edit</mat-icon></a> &nbsp;
+              
+                             
+
+                                  <a (click)=" softRoles(role)">
+                                   <mat-icon>delete</mat-icon></a>
+                              </td>
+                            </tr>
+ 
+ 
+ 
+ 
+ 
+                       
+ 
+                         
+ 
+                      </tbody>
+                 
+ 
+                   </table>
+                   <mat-paginator [length]="100"
+                   [pageSize]="4"
+                   [pageSizeOptions]="[5, 10, 25, 100]"
+                   aria-label="Select page">
+     </mat-paginator>
+                </form>
+ 
+ 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

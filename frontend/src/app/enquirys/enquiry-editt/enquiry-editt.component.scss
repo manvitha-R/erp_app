@@ -1,0 +1,60 @@
+
+table {
+  border:  1px solid black;
+}
+
+th {
+  position: sticky;
+  top: 0px;
+}
+.table-wrapper {
+  max-height: 300px;
+  overflow: scroll;
+}
+
+/* Style for the table body */
+.table-wrapper tbody {
+  background-color: #f8f9fa; /* Background color */
+}
+
+/* Style for the table body rows (optional) */
+//   .table-wrapper tbody tr {
+  
+//   }
+
+/* Style for the table body cells */
+.table-wrapper tbody td {
+  padding: 8px; /* Padding around the content */
+  border: 1px solid #000306; /* Border */
+}
+
+/* Style for specific columns (optional) */
+//   .table-wrapper tbody td:nth-child(1) {
+//     /* Style for the first column */
+//   }
+
+//   .table-wrapper tbody td:nth-child(2) {
+//     /* Style for the second column */
+//   }
+
+/* Continue nth-child styling for other columns as needed */
+
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.table-container table {
+  width: 100%; /* Set the table width to 100% of its container */
+  border-collapse: collapse; /* Collapse table borders */
+}
+
+.table-container th, .table-container td {
+  padding: 8px; /* Add padding to table cells */
+  text-align: center; /* Center-align table cell content */
+}
+
+/* Optionally, you can set a maximum width for the table */
+.table-container {
+  max-width: 100%; /* Adjust as needed */
+}
+

@@ -1,0 +1,68 @@
+<p>
+    <!-- <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>supervised_user_circle</mat-icon>
+      </button>
+      <span>ROLES</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button color="warn" >Logout </button>
+    </mat-toolbar> -->
+
+    <span style="text-align: center;font-weight: bold;"><h1>ROLES LISTS</h1></span>
+
+  </p>
+  <div class="buttons"  >
+    <button color="accent"  mat-raised-button >Add Members</button>
+    </div>
+
+  <div class="main-body">
+    
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+  <div class="tabel-container">
+  <!-- <div class="mat-elevation-z8"> -->
+    <table mat-table [dataSource]="dataSource" >
+  
+      <!-- Position Column -->
+
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="role_name">
+        <th mat-header-cell *matHeaderCellDef> Roles name </th>
+        <td mat-cell *matCellDef="let element"> {{element.role_name}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="role_desc">
+        <th mat-header-cell *matHeaderCellDef> Roles desc </th>
+        <td mat-cell *matCellDef="let element"> {{element.role_desc}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action </th>
+        <td mat-cell *matCellDef="let element"> 
+          
+          <a mat-icon-button color="primary"  href="edit-roles/{{element._id}}">
+            <mat-icon>edit</mat-icon>
+          </a> 
+          <a mat-icon-button color="warn" (click)="deleteroles(element._id)">
+            <mat-icon>delete</mat-icon>
+          </a>  
+        </td>
+        
+      </ng-container>
+      
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+  </div>

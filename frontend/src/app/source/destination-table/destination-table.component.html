@@ -1,0 +1,20 @@
+<!-- table.component.html -->
+<table class="table">
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <!-- Add more columns as needed -->
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of inventory" (click)="selectRow(row)">
+        <td>{{ row.item_name }}</td>
+        <td>{{ row.item_code }}</td>
+        <!-- Display more columns as needed -->
+        <td><button class="btn btn-primary">Select</button></td>
+      </tr>
+    </tbody>
+  </table>
+  

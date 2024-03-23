@@ -1,0 +1,309 @@
+
+<div class="py-11">
+  <div class="container">
+      <div class="row justify-content-center">
+  
+          <div class="col-md-18">
+      
+             <div class="card shadow">
+        
+              <div class="card-header">
+                  <h2 class="text-center">-- Item Master --</h2>
+              </div>
+              <div class="card-body">
+                <form  [formGroup]="addinventory" novalidate class="form">
+
+                  <div class="row">
+
+                   
+                      <div class="col-md-4">
+                    <div class="form-group mb-3">
+                      <label for=""><b> Item Name</b></label>
+                      <input type="text" formControlName="item_name" class="form-control">
+                      
+                    </div>
+                    </div>
+                    
+                  </div>
+                 
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group mb-3">
+                        <label for=""><b>Model Number</b></label>
+                        <input type="text" formControlName="item_model_no" class="form-control">
+                        
+                      </div>
+                      </div>
+                   
+                    
+                      <div class="col-md-4">
+                          <div class="form-group mb-3">
+                          <label for=""><b>Item Balance</b></label>
+                          <input type="text" formControlName="item_balance" class="form-control">
+                          </div>
+                          </div>
+
+                          <div class="col-md-4">
+                            <div class="form-group mb-3">
+                            <label for=""><b>Item Sequence</b></label>
+                            <input type="text" formControlName="item_seq" class="form-control">
+                            </div>
+                            </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group mb-3">
+                          <label for=""><b> Item Description</b></label>
+                          <textarea type="text" formControlName="item_desc" class="form-control"></textarea>
+                          </div>
+                          </div>
+
+                          
+  <div class="col-md-4">
+      <div class="form-group mb-3">
+      <label for=""><b>Item Code</b></label>
+      <input type="text" formControlName="item_code" class="form-control">
+      </div>
+      </div>
+      <div class="col-md-4">
+          <div class="form-group mb-3">
+          <label for=""><b>HSN Code</b></label>
+          <input type="text" formControlName="item_hsn_code" class="form-control">
+          
+          </div>
+          </div>
+               </div>
+
+
+
+
+
+<div class="row">
+
+  <div class="col-md-4">
+      <div class="form-group mb-3">
+      <label for=""><b>Unit</b></label>
+      <input type="text" formControlName="item_unit" class="form-control">
+      </div>
+      </div>
+      <div class="col-md-4">
+          <div class="form-group mb-3">
+          <label for=""><b>Quanity</b></label>
+          <input type="text" formControlName="item_qty" class="form-control">
+          
+          </div>
+          </div>
+
+          <div class="col-md-4">
+              <div class="form-group mb-3">
+              <label for=""><b>Rate</b></label>
+              <input type="text" formControlName="item_rate" class="form-control">
+              
+              </div>
+              </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+      <div class="form-group mb-3">
+      <label for=""><b>Amount</b></label>
+      <input type="text" formControlName="item_amount" class="form-control">
+      </div>
+      </div>
+      <div class="col-md-4">
+          <div class="form-group mb-3">
+          <label for=""><b>Discount Rate</b></label>
+          <input type="text" formControlName="item_disc" class="form-control">
+          
+          </div>
+          </div>
+
+          <div class="col-md-4">
+              <div class="form-group mb-3">
+              <label for=""><b>Discount Value</b></label>
+              <input type="text" formControlName="item_disc_value" class="form-control">
+              
+              </div>
+              </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+      <div class="form-group mb-3">
+      <label for=""><b>MRP</b></label>
+      <input type="text" formControlName="item_mrp" class="form-control">
+      </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group mb-3">
+        <label for=""><b>Effective Rate</b></label>
+        <input type="text" formControlName="item_eff_rate" class="form-control">
+        
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group mb-3">
+          <label for=""><b>Effective Value</b></label>
+          <input type="text" formControlName="item_eff_value" class="form-control">
+          
+          </div>
+          </div>
+      </div>
+<div class="row">
+  <div class="col-md-4">
+      <div class="form-group mb-3">
+      <label for=""><b>Lead Time</b></label>
+      <input type="text" formControlName="item_lead_time" class="form-control">
+      </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group mb-3">
+        <label for=""><b>Tax Code</b></label>
+        <input type="text" formControlName="item_tax_code" class="form-control">
+        </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group mb-3">
+          <label for=""><b>Taxable</b></label>
+          <input type="text" formControlName="item_taxable" class="form-control">
+          
+          </div>
+          </div>
+
+       
+      </div>
+
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="form-group mb-3">
+    <label for=""><b>Net Rate</b></label>
+    <input type="text" formControlName="item_net_rate" class="form-control">
+    </div>
+    </div>
+              
+    <div class="col-md-4">
+      <div class="form-group mb-3">
+      <label for=""><b>Tax Amount</b></label>
+      <input type="text" formControlName="item_tax_amt" class="form-control">
+      </div>
+      </div>   
+      <div class="col-md-4">
+        <div class="form-group mb-3">
+        <label for=""><b>Tax Rate</b></label>
+        <input type="text" formControlName="item_tax_rate" class="form-control">
+        
+        </div>
+        </div>       
+</div>
+
+
+<div class="row">
+         
+              <div class="col-md-4">
+                <div class="form-group mb-3">
+                <label for=""><b>Cess Calculation</b></label>
+                <input type="text" formControlName="item_cess_calc" class="form-control">
+                </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group mb-3">
+                    <label for=""><b>Posting GL</b></label>
+                    <input type="text" formControlName="item_posting_gl" class="form-control">
+                    
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group mb-3">
+                      <label for=""><b>Installation Required</b></label>
+                      <input type="text" formControlName="item_install_req" class="form-control">
+                      </div>
+                      </div>
+</div>
+
+<div class="row">
+
+         
+            
+              <div class="col-md-4">
+                  <div class="form-group mb-3">
+                  <label for=""><b>Make</b></label>
+                  <input type="text" formControlName="item_make" class="form-control">
+                  
+                  </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group mb-3">
+                    <label for=""><b>Sales Rate</b></label>
+                    <input type="text" formControlName="item_sales_rate" class="form-control">
+                    
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group mb-3">
+                      <label for=""><b>Markup</b></label>
+                      <input type="text" formControlName="item_markup" class="form-control">
+                      </div>
+                      </div>
+</div>
+
+<div class="row">
+         
+                <div class="col-md-4">
+                    <div class="form-group mb-3">
+                    <label for=""><b>Markup%</b></label>
+                    <input type="text" formControlName="item_markup_per" class="form-control">
+                    
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group mb-3">
+                      <label for=""><b>SGST</b></label>
+                      <input type="text" formControlName="item_sgst" class="form-control">
+                      </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="form-group mb-3">
+                          <label for=""><b>CGST</b></label>
+                          <input type="text" formControlName="item_cgst" class="form-control">
+                          
+                          </div>
+                          </div>
+</div>
+
+<div class="row">
+  
+
+          <div class="col-md-4">
+              <div class="form-group mb-3">
+              <label for=""><b>IGST</b></label>
+              <input type="text" formControlName="item_igst" class="form-control">
+              
+              </div>
+              </div>
+
+
+          <div class="col-md-4">
+              <div class="form-group mb-3">
+              <label for=""><b>Warranty/Months</b></label>
+              <input type="text" formControlName="item_war_months" class="form-control">
+              
+              </div>
+              </div>
+</div>
+  <div class="from-group text-center">
+    <button type="submit" (click)="onSubmit()" class="btn btn-success">Save</button>&nbsp;
+    <a class="btn btn-danger" href="list-inventory" >Cancel</a>
+  </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ 
+
+    

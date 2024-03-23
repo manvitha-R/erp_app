@@ -1,0 +1,86 @@
+<div class="container mt-10">
+
+
+
+   
+
+   <div class="row">
+   <div class="col-md-11" >
+    
+
+         <div class="card ">
+
+            <div class="card-header">
+             
+               <h2 class="text-center"> -- SALES ORDER LIST --</h2>
+               <h4>
+                  <a href="add-sale" class="btn btn-primary float-end">Add Sales Order</a>&nbsp;
+                </h4>
+                <br>
+                <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+             
+            </div>
+            
+
+            <div class="card-body">
+           
+
+               <form action="code1.php" method="POST">
+                   
+
+                  <table class="table table-bordered ">
+
+                     <thead class="text-center">
+                        <tr >
+                      
+
+                           <th>Customer Name</th>
+                           <!-- <th>Item</th>
+                           <th>Salesmen</th>
+                           <th>Customer Email</th> -->
+                        
+                          <th>Order Date</th>
+                          <th>Delivery Date</th>
+                          <th>Action</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        
+                       <tr>
+                          <tr *ngFor="let sales of sales_ord | search: searchText" class="text-center">
+                              <td>{{sales.sales_ord_cust_name}}</td> 
+                              <td>{{sales.sales_ord_date}}</td>
+                              <td>{{sales.sales_ord_del_date}}</td>
+                              <!-- <td>{{cust.country}}</td> -->
+                              <!-- <td>{{cust.city}}</td> -->
+                            
+                              <!-- <td>{{cust.action}}</td> -->
+                             
+           
+                             
+                              <td>
+                                <a href="edit-sale/{{sales._id}}">
+                                    <mat-icon>edit</mat-icon></a> &nbsp;
+                
+                                    <a (click)=" softRoles(sales)">
+                                        <mat-icon>delete</mat-icon></a>
+                                </td>
+     
+                          </tr>
+
+
+                      
+
+                        
+
+                     </tbody>
+
+                  </table>
+               </form>
+
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

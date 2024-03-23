@@ -1,0 +1,55 @@
+<!-- <h1>ROles</h1>
+<div class="card">
+    <div class="card-head">Lorem ipsum - dashboard</div> -->
+
+
+    <div class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+        
+                <div class="col-md-6">
+            
+                   <div class="card shadow">
+              
+                    <div class="card-header text-center">
+                        <h2>Edit Role</h2>
+                    </div>
+                    <div class="card-body">
+                    
+                        <form [formGroup]="addRoles" novalidate class="form">
+                         
+                         <div class="form-group mb-3">
+                             <label for="">Role Name</label>
+                             <input type="text" formControlName="role_name" class="form-control">
+     
+                         </div>
+     
+                         <div class="form-group mb-3">
+                             <label for="">Role Description</label>
+                             <input type="text" formControlName="role_desc" class="form-control">
+     
+                         </div>
+                         
+                         
+                         
+                         <div class="from-group text-center">
+                             <button type="submit" (click)="onSubmit()" class="btn btn-success">Update Roles</button>&nbsp;
+                             <a class="btn btn-danger" href="list-roles" >Cancel</a>
+                             <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+     
+                         </div>
+     </form>
+     <hr>
+     <!-- <h5>
+         Did not recieve your Verification Email?
+         <a href="resend-email-verification.php">Resend</a>
+     </h5> -->
+                     </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+    
+<!-- </div> -->

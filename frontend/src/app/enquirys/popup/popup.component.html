@@ -1,0 +1,202 @@
+<!-- item-master.component.html -->
+
+<div class="card">
+   <div class="card-header">
+     <h2 class="text-center"> -- Item Master --</h2>
+     <input type="text" id="searchInput" name="search" class="form-control" placeholder="search" [(ngModel)]="searchText">
+   </div>
+ 
+   <div class="card-body">
+     <table class="table table-bordered">
+       <thead class="text-center">
+         <tr>
+          <th>Select Item</th>
+          <th>Model #</th>
+        <th>Item Name</th>
+        <th>Item Description</th>
+        <th>Item Balance</th>
+        <th>Item Code</th>
+        <th>Item Sequence</th>
+        <th>HSN Code</th>
+        <th>Unit</th>
+        <th>Quantity</th>
+        <th>MRP</th>
+        <th>Rate</th>
+        <th>Amount</th>
+        <th>Eff.Rate</th>
+        <th>Eff. Value</th>
+        <th>Net Rate</th>
+        <th>Discount</th>
+        <th>Discount Value</th>
+        <th>Tax Code</th>
+        <th>Taxable</th>
+        <th>Tax Rate</th>
+        <th>Tax Amount</th>
+        <th>IGST</th>
+        <th>CGST</th>
+        <th>SGST</th>
+        <th>Cess Calculation</th>
+        <th>Installation Req.</th>
+        <th>Posting GL</th>
+        <th>Lead Time</th>
+        <th>Make</th>
+        <th>Markup</th>
+        <th>Markup%</th>
+        <th>Sales Rate</th>
+        <th>Warranty Months</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let item of inventory; let i=index" class="text-center">
+           <td class="text-center">
+             <input type="checkbox" id="checkboxId{{i+1}}" name="checkboxName" [(ngModel)]="item.checked">
+           </td>
+           <!-- <td>
+             <div [formGroup]="addinventory"> 
+            <input type="text" formControlName="item_model_no" [value]="item.item_model_no" class="form-control">
+           </div> 
+        </td>
+           <td>
+            <div [formGroup]="addinventory">
+              <input type="text" formControlName="item_name" [value]="item.item_name" class="form-control">
+            </div>
+          </td>
+           <td>
+          <div [formGroup]="addinventory">
+            <input type="text" formControlName="item_desc" [value]="item.item_desc" class="form-control">
+          </div>
+          </td>
+            <td>
+             <div [formGroup]="addinventory">
+            <input type="text" formControlName="item_balance" [value]="item.item_balance" class="form-control">
+          </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_code" [value]="item.item_code" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_seq" [value]="item.item_seq" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_hsn_code" [value]="item.item_hsn_code" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_unit" [value]="item.item_unit" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_qty" [value]="item.item_qty" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_mrp" [value]="item.item_mrp" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_rate" [value]="item.item_rate" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_amount" [value]="item.item_amount" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_eff_rate" [value]="item.item_eff_rate" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_eff_value" [value]="item.item_eff_value" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_net_rate" [value]="item.item_net_rate" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_disc" [value]="item.item_disc" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_disc_value" [value]="item.item_disc_value" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_tax_code" [value]="item.item_tax_code" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_taxable" [value]="item.item_taxable" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_tax_rate" [value]="item.item_tax_rate" class="form-control">
+              </div>
+            </td>
+            <td>
+              <div [formGroup]="addinventory">
+                <input type="text" formControlName="item_tax_amt" [value]="item.item_tax_amt" class="form-control">
+              </div>
+            </td> -->
+            <td>{{item.item_model_no}}</td>
+            <td>{{item.item_name}}</td>
+            <td>{{item.item_desc}}</td>
+            <td>{{item.item_balance}}</td>
+            <td>{{item.item_code}}</td>
+            <td>{{item.item_seq}}</td>
+            <td>{{item.item_hsn_code}}</td>
+            <td>{{item.item_unit}}</td>
+            <td>{{item.item_qty}}</td>
+            <td>{{item.item_mrp}}</td>
+            <td>{{item.item_rate}}</td>
+            <td>{{item.item_amount}}</td>
+            <td>{{item.item_eff_rate}}</td>
+            <td>{{item.item_eff_value}}</td>
+            <td>{{item.item_net_rate}}</td>
+            <td>{{item.item_disc}}</td>
+            <td>{{item.item_disc_value}}</td>
+            <td>{{item.item_tax_code}}</td>
+            <td>{{item.item_taxable}}</td>
+            <td>{{item.item_tax_rate}}</td>
+            <td>{{item.item_tax_amt}}</td>
+            <td>{{item.item_igst}}</td>
+            <td>{{item.item_cgst}}</td>
+            <td>{{item.item_sgst}}</td>
+            <td>{{item.item_cess_calc}}</td>
+            <td>{{item.item_install_req}}</td>
+            <td>{{item.item_posting_gl}}</td>
+              <td>{{item.item_lead_time}}</td>
+              <td>{{item.item_make}}</td>
+              <td>{{item.item_markup}}</td>
+              <td>{{item.item_markup_per}}</td>
+              <td>{{item.item_sales_rate}}</td>
+              <td>{{item.item_war_months}}</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+ 
+   <div class="from-group text-center">
+     <button (click)="saveCheckedData()" class="btn btn-primary">Save Checked Data</button>&nbsp;
+     <!-- <a class="btn btn-danger" href="dest" >Cancel</a> -->
+   </div>
+   <br>
+ </div>

@@ -1,0 +1,150 @@
+<!-- <h1 >Roles List</h1>
+
+     
+                 <div class="card-header">
+                  
+                    <h3 class="text-center"> -- Membership Type Details --</h3>
+                    <h4>
+                       <a href="add-roles" class="btn btn-primary float-end">Add roles</a>
+                     </h4>
+     
+                  
+                 </div>
+                 
+
+      <table class="table table-bordered table-striped">
+        <thead >
+            <tr>
+          
+
+               <th>Member ID</th>
+              <th> Membership Type</th>
+               <th>Action</th>
+            </tr>
+         </thead>
+         <tbody>
+            
+
+            <tr>
+               <tr >
+                   <td></td>
+                   <td></td>
+                  
+                   <td>
+                   <a href="edit-roles/" class="btn btn-success">Edit</a> |
+   
+                       <button  class="btn btn-danger">Delete</button>
+                   </td>
+               </tr>
+
+
+
+
+
+          
+
+            
+
+         </tbody>
+      </table>
+      
+  -->
+
+
+  
+  <div class="container mt-5">
+
+
+
+
+   <div class="row">
+   <div class="col-md-11" >
+    
+
+         <div class="card ">
+
+            <div class="card-header">
+             
+               <h2 class="text-center"> -- Dispatch List --</h2>
+               <h4>
+                  <a href="dispatch" class="btn btn-primary float-end">Add Dispatch</a>&nbsp;
+                </h4>
+                <br>
+
+                <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+            </div>
+            
+
+            <div class="card-body">
+           
+
+               <form action="code1.php" method="POST">
+                   
+
+                  <table class="table table-bordered table-striped">
+
+                     <thead class="text-center">
+                        <tr>
+                           <th>Customer</th>
+                           <th>Email</th>
+                          
+                          <th>Dispatch Date</th>
+                            <th>Action</th>
+                       <!-- <th>Status</th>  -->
+                        </tr>
+                     </thead>
+                     <tbody>
+                        
+                       <tr>
+                          <tr *ngFor="let disp of dispatch | search: searchText" class="text-center">
+                          
+                              <td>{{disp.disp_cust}}</td>
+                              <td>{{disp.disp_cust_email}}</td>
+                              <td>{{disp.disp_date}}</td>
+                              <!-- <td>{{exec.action}}</td> -->
+
+                              <td>
+                               <a href="edit-dispatch/{{disp._id}}">
+                                 <mat-icon>edit</mat-icon></a> &nbsp;
+               
+                              
+
+                                    <a (click)=" softRoles(disp)">
+                                    <mat-icon>delete</mat-icon></a> 
+                               </td>
+                             
+                               <!-- <td>
+                               
+                                   <select  formControlName="exec_amount" class="form-control">
+                                      <option >Taxable</option>
+                                      <option href="sale-exec">Bill Amount</option>
+                                   
+                              
+                                    </select>
+                                    &nbsp;
+                               </td> -->
+                              <!-- <td>
+                              <a href="edit-designation/{{desc._id}}" class="btn btn-success">Edit</a> &nbsp;
+              
+                                  <button (click)=" softRoles(desc)" class="btn btn-danger">Delete</button>
+                              </td> -->
+                          </tr>
+
+
+                      
+
+                        
+
+                     </tbody>
+
+                  </table>
+               </form>
+
+
+            </div>
+
+
+         </div>
+      </div>
+   </div>
+ </div>

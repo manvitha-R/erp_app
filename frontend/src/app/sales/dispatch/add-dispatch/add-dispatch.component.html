@@ -1,0 +1,826 @@
+<div class="py-11">
+  <div class="container">
+      <div class="row justify-content-center">
+  
+          <div class="col-md-18">
+      
+             <div class="card shadow">
+        
+              <div class="card-header">
+                  <h2 class="text-center">-- Dispatch --</h2>
+              </div>
+              <div class="card-body">
+                <form  [formGroup]="adddispatch" novalidate class="form">
+                  
+                  <!-- <div  class="row">
+                    <div class="col-md-5">
+                      <div class="form-group mb-3">
+                        <label for=""> GST Number</label>
+                       
+                        <input type="text" formControlName="gst_num" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group mb-3">
+                    <button type="submit" class="btn btn-success">Fetch</button>
+                    </div>
+                    </div>
+                  </div> -->
+                  <div class="row">
+                      <div class="col-md-4">
+                    <div class="form-group mb-3">
+                      <label for=""><b>GST Type</b></label>
+                      <select id="gstCategory" formControlName="disp_gst_type" class="form-control">
+                        <option>Taxlnvoice</option>
+                        <option>Export Bonded</option>
+                        <option>Export Non Bonded</option>
+                        <option>Ecommerce Supply</option>
+                        <option>Bill Of Supply</option>
+                        <option>Branch Transfer</option>
+  
+                      </select>
+                      
+                    </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="form-group mb-3">
+                      <label for=""><b>Dispatch Date</b></label>
+                      <input type="date" formControlName="disp_date" class="form-control">
+                      
+                      </div>
+                      </div>
+                    </div>
+                  
+<!-- 
+                    <div class="row">
+                      <div class="col-md-5">
+                    <div class="form-group mb-3">
+                      <label for="">GST Category</label>
+                      <select id="gstCategory" formControlName="gst_cat" class="form-control">
+                        <option>Registered</option>
+                        <option>Unregistered</option>
+                        <option>Composition</option>
+                        <option>UIN_SEZ</option>
+                        <option>ExportHouse</option>
+                        <option>OverseasParty</option>
+  
+                      </select>
+                      
+                    </div>
+                    </div>
+                    <div class="col-md-5">
+                    <div class="form-group mb-3">
+                      <label for="">Contact Person Name</label>
+                      <input type="text" formControlName="cont_per_name" class="form-control">
+                      
+                    
+                    </div>
+                    
+                    </div>
+                    </div> -->
+                  <!-- <div class="row">
+                    <div class="col-md-5">
+                  <div class="form-group mb-3">
+                  <label for="">GST Category</label>
+                  <select id="gstCategory" formControlName="gst_cat" class="form-control">
+                    <option>Registered</option>
+                    <option>Unregistered</option>
+                    <option>Composition</option>
+                    <option>UIN_SEZ</option>
+                    <option>ExportHouse</option>
+                    <option>OverseasParty</option>
+
+                  </select>
+                  
+                  </div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <div class="form-group mb-3">
+                    <label for="">Customer Name</label>
+                    <input type="text" formControlName="cust_name" class="form-control">
+                    
+                    </div>
+                    </div>
+                  </div> -->
+
+                  <!-- <div class="row">
+                    <div class="col-md-5">
+                  <div class="form-group mb-3">
+                  <label for="">Customer Name</label>
+                  <input type="text" formControlName="cust_name" class="form-control">
+                  
+                  </div>
+                  </div> -->
+                  <!-- <div class="col-md-5">
+                  <div class="form-group mb-3">
+                    <label for="">Pan Number</label>
+                    <input type="email" formControlName="pan_number" class="form-control">
+                  
+                  </div>
+                  
+                  </div> -->
+                  <!-- </div> -->
+
+<div class="row">
+
+<div class="col-md-4">
+<div class="form-group mb-3">
+  <label for=""><b>Warehouse</b></label>
+  <select id="gstCategory" formControlName="disp_warehouse" class="form-control">
+    <option>Exclusive</option>
+    <option>Inclusive</option>
+    </select>
+
+</div>
+
+</div>
+  <div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Dispatch No</b></label>
+<input type="text" formControlName="disp_number" class="form-control">
+  <!-- <option>Export Bonded</option>
+  <option>Export Non Bonded</option>
+  <option>Ecommerce Supply</option>
+  <option>Bill Of Supply</option>
+  <option>Branch Transfer</option> -->
+
+
+</div>
+</div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Customer</b></label>
+<select id="gstCategory" formControlName="disp_cust" class="form-control">
+  <option>Exclusive</option>
+  <option>Inclusive</option>
+  </select>
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>Reference</b></label>
+  <input type="text" formControlName="disp_ref" class="form-control">
+
+</div>
+
+</div>
+</div>
+<!-- <div class="col-md-4">
+  <div class="form-group mb-3">
+    <label for=""><b>Ref No</b></label>
+    <input type="text" formControlName="ref_number" class="form-control">
+  
+  </div>
+  
+  </div> -->
+
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group mb-3">
+                          <label for=""><b>Email</b></label>
+                          <input type="email" formControlName="disp_cust_email" class="form-control">
+                        
+                        </div>
+                        
+                        </div>
+                      <div class="col-md-4">
+                    <div class="form-group mb-3">
+                      <label for=""><b>Ref Date</b></label>
+                      <input type="date" formControlName="disp_ref_date" class="form-control">
+                      
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-4">
+                    <div class="form-group mb-3">
+                      <label for=""><b>Salesmen</b></label>
+                      <select id="gstCategory" formControlName="disp_salesmen" class="form-control">
+                          <option>Exclusive</option>
+                          <option>Inclusive</option>
+                          <!-- <option>Export Bonded</option>
+                          <option>Export Non Bonded</option>
+                          <option>Ecommerce Supply</option>
+                          <option>Bill Of Supply</option>
+                          <option>Branch Transfer</option> -->
+                      
+                        </select>
+                      
+                    
+                    </div>
+                    
+                    </div>
+                   
+                      <div class="col-md-4">
+                        <div class="form-group mb-3">
+                          <label for=""><b>Tax</b></label>
+                          <select id="gstCategory" formControlName="disp_tax" class="form-control">
+                            <option>Exclusive</option>
+                            <option>Inclusive</option>
+                            </select>
+                        
+                        </div>
+                        
+                        </div>
+                    </div>
+                    </div>
+<!-- 
+<div class="col-md-5">
+  <div class="form-group mb-3">
+    <label for="">Customer PAN No</label>
+    <input type="email" formControlName="cust_pan_number" class="form-control">
+  
+  </div>
+  
+  </div> -->
+  <div>
+
+<!--      
+<div class="col-md-6" style="border-left: 1px solid blue"> -->
+</div>
+
+<!-- <div class="row">
+<div class="col-md-6" style=" margin-top: 40px;">
+  <div class="form-group mb-3">
+    <label for="">Address</label>
+    <textarea   type="address" formControlName="address" class="form-control" ></textarea>
+    
+    </div>
+
+    
+    <div class="row">
+      <div class="col-md-6">
+    <div class="form-group mb-3">
+    <label for="">City</label>
+    <input   type="city" value="" formControlName="city" class="form-control">
+    
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group mb-3">
+      <label for="">State</label>
+      <input   value="" type="state" formControlName="state" class="form-control" />
+    
+    </div>
+    
+    </div>
+    </div>
+      
+
+       
+<div class="row">
+  <div class="col-md-6">
+<div class="form-group mb-3">
+<label for="">Country</label>
+<input   value="" type="country" formControlName="country" class="form-control" />
+
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group mb-3">
+  <label for="">Pin Code</label>
+  <input  maxlength="6" type="pincode"  formControlName="pincode" class="form-control" >
+          
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="col-md-6" style="border-left: 1px solid blue">
+ 
+  <mat-checkbox class="example-margin" #checkbox (change)="temp(checkbox.checked)" > Same As Permanent Address</mat-checkbox>
+  <div class="form-group mb-3">
+    <label for="">Address</label>
+    <textarea  formControlName="tempAddress" class="form-control" ></textarea>
+    
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+    <div class="form-group mb-3">
+    <label for="">City</label>
+    <input   type="tempCity" formControlName="tempCity" class="form-control" value="" />
+  
+    
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group mb-3">
+      <label for="">State</label>
+      <input   type="tempState" formControlName="tempState" class="form-control" value="" />
+  
+    
+    </div>
+    
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+    <div class="form-group mb-3">
+    <label for="">Country</label>
+    <input   type="tempCountry" formControlName="tempCountry" class="form-control">
+    
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group mb-3">
+      <label for="">Pin Code</label>
+      <input   type="tempPincode" formControlName="tempPincode" class="form-control"value=""   />
+              
+    
+    </div>
+    
+    </div>
+    </div>
+    </div>
+ 
+
+
+
+    
+</div><br> -->
+<button type="submit"  class="btn btn-success">Pull From Purchase Order</button><br>
+   <hr>
+
+   <div class="outer-wrapper">
+   <div class="table-wrapper">
+   <table class="table table-bordered ">
+
+    <thead class="text-center">
+       <tr class="table-success" >
+        
+        <th>SNo</th>
+        
+          <!-- <th>Item</th>
+          <th>Salesmen</th>
+          <th>Customer Email</th> -->
+          <th>Est #</th>
+         <th>Description</th>
+         <th>Sub Item</th>
+         <th>Pack Unit</th>
+         <th>Pack Qty</th>
+         <th>Unit</th>
+         <th>Quanity</th>
+         <th>Rate</th>
+         <th>Amount</th>
+         <th>Discount</th>
+         <th>TaxCode</th>
+         <th>TaxRate</th>
+         <th>Taxable</th>
+         <th>TaxAmount</th>
+         <th>Cess Rate</th>
+         <th>Cess Amount</th>
+         <th>MRP</th>
+         <th>Net Rate</th>
+         <th>Itembalance</th>
+         <th>Model No</th>
+         <th>IGST</th>
+         <th>CGST</th>
+         <th>SGST</th>
+         <th>HSN Code</th>
+         <th>Model</th>
+         <!-- <th>Action</th> -->
+       </tr>
+    </thead>
+    <!-- <tbody>
+       
+      <tr>
+        <tr  class="text-center">
+          <td>1</td>
+          <td>abc</td>
+          <td>siudhhhhhhhhhhhhhhhhhhhhhhh</td>
+          <td>1idu</td>
+          <td>udd</td>
+          <td>ooo</td>
+          <td>ee</td>
+          <td>eejek</td>
+          <td>wer</td>
+          <td>ddk</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+      
+        
+            
+
+        
+            
+         </tr>
+         <tr  class="text-center">
+          <td>1</td>
+          <td>abc</td>
+          <td>siud</td>
+          <td>1idu</td>
+          <td>udd</td>
+          <td>ooo</td>
+          <td>ee</td>
+          <td>eejek</td>
+          <td>wer</td>
+          <td>ddk</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          <td>iidj</td>
+          
+       
+            
+
+        
+            
+         </tr>
+
+
+     
+
+       
+
+    </tbody> -->
+
+ </table>
+</div>
+</div><br>
+<!--  
+<div class="row">
+<div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Item Value</b></label>
+<input type="text" formControlName="estimate_date" class="form-control">
+
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+<label for=""><b>Discount</b></label>
+<input type="text" formControlName="estimate_number" class="form-control">
+
+</div>
+
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>cutting Charges</b></label>
+  <input type="text" formControlName="estimate_number" class="form-control">
+
+</div>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Taxable</b></label>
+<input type="text" formControlName="estimate_date" class="form-control">
+
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+<label for=""><b>Tax Amount</b></label>
+<input type="text" formControlName="estimate_number" class="form-control">
+
+</div>
+
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>cess Amount</b></label>
+  <input type="text" formControlName="estimate_number" class="form-control">
+
+</div>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Additional discount</b></label>
+<input type="text" formControlName="estimate_date" class="form-control">
+
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+<label for=""><b>Tcs</b></label>
+<input type="text" formControlName="estimate_number" class="form-control">
+
+</div>
+
+</div>
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>Round Off</b></label>
+  <input type="text" formControlName="estimate_number" class="form-control">
+
+</div>
+
+</div>
+<div class="col-md-4">
+  <div class="form-group mb-2">
+    <label for=""><b>Doc Amount</b></label>
+    <input type="text" formControlName="estimate_number" class="form-control">
+  
+  </div>
+  
+  </div>
+</div> -->
+<!-- ksksk -->
+<!-- 
+<div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Item Value</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" formControlName="estimate_date" >
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group mb-2">
+<label for=""><b>Discount</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" formControlName="estimate_number">
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>cutting Charges</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" formControlName="estimate_number">
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Taxable</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" formControlName="estimate_date">
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group mb-2">
+<label for=""><b>Tax Amount</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" formControlName="estimate_number">
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>cess Amount</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" formControlName="estimate_number">
+
+</div>
+
+</div>
+
+ <div class="col-md-4">
+<div class="form-group mb-3">
+<label for=""><b>Additional discount</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" formControlName="estimate_date">
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="form-group mb-2">
+<label for=""><b>Tcs</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" formControlName="estimate_number">
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+<div class="form-group mb-2">
+  <label for=""><b>Round Off</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" formControlName="estimate_number">
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+  <div class="form-group mb-2">
+    <label for=""><b>Doc Amount</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" formControlName="estimate_number">
+  
+  </div>
+  
+  </div> -->
+
+
+  <!-- <div class="row"> -->
+    <!-- <div class="col-md-12 text-center">
+     <h2>Add Student</h2>
+    </div>  -->
+    <!-- <div class="row"> -->
+     
+      <!-- <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-3"><b>Item Value</b></div>
+       <div class="col-md-4">
+        <input type="text" formControlName="est_item_val" class="form-control">
+       </div>
+      </div>
+ 
+      <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-3"><b>Discount</b></div>
+       <div class="col-md-4">
+        <input type="text" formControlName="est_discount" class="form-control">
+       </div>
+      </div>
+ 
+      <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-3"><b>Cutting Charges</b></div>
+       <div class="col-md-4">
+        <input type="text" formControlName="est_cutting_chrgs" class="form-control">
+       </div>
+      </div>
+ 
+      <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-3"><b>Taxable</b></div>
+       <div class="col-md-4">
+        <input type="text" formControlName="est_taxable" class="form-control">
+       </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Tax Amount</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_tax_amt" class="form-control">
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Cess Amount</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_cess_amt" class="form-control">
+        </div>
+       </div>
+ 
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Additional discount</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_add_discount" class="form-control">
+        </div>
+       </div>
+ 
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Tcs</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_tcs" class="form-control">
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Round Off</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_roundoff" class="form-control">
+        </div>
+       </div><br>
+
+       <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3"><b>Doc Amount</b></div>
+        <div class="col-md-4">
+          <input type="text" formControlName="est_doc_amt" class="form-control">
+        </div>
+       </div>
+   
+    
+ 
+    </div>
+ </div>
+<br> -->
+
+<!-- kjkksksk -->
+<div class="from-group text-center">
+  <button type="submit" (click)="onSubmit()" class="btn btn-success">Save</button>&nbsp;
+  <a class="btn btn-danger" href="list-dispatch" >Cancel</a>
+  <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <!-- </div>      -->
+<!--         
+    <div class="row">    
+              <label> Address</label>
+              <textarea  placeholder="Ex. Enter the Address Here" type="address" formControlName="address" class="form-control" ></textarea>
+              
+           
+        
+    
+              <label>country </label>
+              <input  placeholder="Ex. Karnataka" value="" type="country" formControlName="country" class="form-control" />
+          
+          
+    
+     
+              <label>City </label>
+              <input  placeholder="Ex. Bangalore" type="city" value="" formControlName="city" class="form-control">
+            
+             
+     
+    
+         
+              <label>Pin Code</label>
+              <input  placeholder="Ex. 560031" maxlength="6" type="pincode"  formControlName="pincode" class="form-control" >
+          
+      </div>
+    
+    
+      <div class="col-md-6" style="border-left: 1px solid blue">
+       
+        <mat-checkbox class="example-margin" #checkbox (change)="temp(checkbox.checked)"> Address Same As Above </mat-checkbox>
+        
+              <label> Address</label>
+              <textarea  placeholder="Ex. Enter the Address Here" formControlName="tempAddress" class="form-control" ></textarea>
+              
+            
+       
+    
+
+              <label>country </label>
+              <input  placeholder="Ex. Karnataka" type="tempCountry" formControlName="tempCountry" class="form-control">
+             
+
+    
+        
+            <label>City </label>
+              <input  placeholder="City" type="tempCity" formControlName="tempCity" class="form-control" value="" />
+
+    
+
+              <label>pincode</label>
+              <input  placeholder="Pincode" type="tempPincode" formControlName="tempPincode" class="form-control"value=""   />
+            
+          
+    
+            
+
+          
+
+      <div style="text-align: center; margin-top: 10px;">
+        <button type="button" mat-raised-button color="warn" >Close</button>
+        <button type="submit"  mat-raised-button color="primary" style="margin-left: 15px;" >Save</button>
+    
+        
+      </div>
+    
+   
+  </div> -->

@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header">
+      <h2 class="text-center"> -- Destination Table --</h2>
+    </div>
+    <div class="card-body">
+      <button (click)="Openpopup()" mat-raised-button class="btn btn-primary">Pull From Enquiry</button><br>
+      <table class="table table-bordered">
+        <thead class="text-center">
+          <tr>
+            <th>Item Name</th>
+            <th>Code</th>
+            <th>HSN Code</th>
+            <th>Model #</th>
+            <th>Category sName</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+
+        <tbody *ngFor="let item of getSelectedItems()" class="text-center">
+          
+                <!-- Display item details as needed -->
+                <td>{{item.item_name}}</td>
+                <td>{{item.item_code}}</td>
+                <td>{{item.item_hsn_code}}</td>
+                <td>{{item.item_model_no}}</td>
+                <td>{{item.item_cat}}</td>
+                <td>{{item.item_type}}</td>
+        
+            <!-- <tr *ngFor="let row of selectedRows" class="text-center">
+                <td>{{ row?.item_name }}</td>
+                <td>{{ row?.item_code }}</td>
+                <td>{{ row?.item_hsn_code }}</td>
+                <td>{{ row?.item_model_no }}</td>
+                <td>{{ row?.item_cat }}</td>
+                <td>{{ row?.item_type }}</td>
+              </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

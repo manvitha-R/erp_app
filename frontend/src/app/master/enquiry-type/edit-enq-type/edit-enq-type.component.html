@@ -1,0 +1,46 @@
+<div class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+    
+            <div class="col-md-6">
+        
+               <div class="card shadow">
+          
+                <div class="card-header text-center">
+                    <h2>Update Enquiry Type </h2>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="addtype" novalidate class="form">
+                        <div class="form-group mb-3">
+                            <label for="">Enquiry_Type Name</label>
+                            <input type="text" formControlName="enq_type_name" class="form-control">
+    
+                        </div>
+    
+                        <div class="form-group mb-3">
+                            <label for="">Enquiry_Type Description</label>
+                            <input type="text" formControlName="enq_type_desc" class="form-control">
+    
+                        </div>
+                        
+                        
+                        
+                        <div class="from-group text-center">
+                            <button type="submit" (click)="onSubmit()" class="btn btn-success">Save</button>&nbsp;
+                            <a class="btn btn-danger" href="list-type" >Cancel</a>
+                            <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+    
+                        </div>
+    </form>
+    <hr>
+    <!-- <h5>
+        Did not recieve your Verification Email?
+        <a href="resend-email-verification.php">Resend</a>
+    </h5> -->
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    

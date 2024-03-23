@@ -1,0 +1,81 @@
+
+<div class="container mt-10">
+
+
+
+   
+
+    <div class="row">
+    <div class="col-md-11" >
+     
+ 
+          <div class="card ">
+ 
+             <div class="card-header">
+              
+                <h2 class="text-center"> -- PURCHASE ORDER LIST --</h2>
+                <h4>
+                   <a href="purchase-req" class="btn btn-primary float-end">Add Purchase Requisition</a>&nbsp;
+                 </h4>
+                 <br>
+                 <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+              
+             </div>
+             
+ 
+             <div class="card-body">
+            
+ 
+                <form action="code1.php" method="POST">
+                    
+ 
+                   <table class="table table-bordered ">
+ 
+                      <thead class="text-center">
+                         <tr >
+                       
+ 
+                            <th>Purchase Requester</th>
+                            <!-- <th>Item</th>
+                            <th>Salesmen</th>
+                            <th>Customer Email</th> -->
+                         
+                           <th>Purchase Date</th>
+                           <th>Purchase Voucher #</th>
+                           <th>Action</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         
+                        <tr>
+                           <tr *ngFor="let req of purchase_requisition | search: searchText " class="text-center">
+                               <td>{{req.pur_req_requester}}</td>
+                               <td>{{req.pur_req_date}}</td>
+                               <td>{{req.pur_req_voucher_no}}</td>
+                            
+                              
+            
+                              
+                               <td>
+                               <a href="purchase-reqedit/{{req._id}}"><mat-icon>edit</mat-icon></a> &nbsp;
+               
+                                   <a (click)=" softRoles(req)"><mat-icon>delete</mat-icon></a>
+                               </td>
+                           </tr>
+
+ 
+                       
+ 
+                         
+ 
+                      </tbody>
+ 
+                   </table>
+                </form>
+ 
+ 
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

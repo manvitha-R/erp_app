@@ -1,0 +1,567 @@
+<div class="py-10">
+    <div class="container">
+        <div class="row justify-content-center">
+    
+            <div class="col-md-18">
+        
+               <div class="card shadow">
+          
+                <div class="card-header">
+                    <h2 class="text-center">-- Enquiry --</h2>
+                </div>
+                <div class="card-body">
+                  <form  [formGroup]="addenquiry" novalidate class="form">
+  
+                    <div class="row">
+                      <div class="col-md-4">
+                    <div class="form-group mb-4">
+                    <label for="">Enquiry No.</label>
+                    <input  formControlName="enq_on" class="form-control" >
+                        <!-- <option>Amount</option>
+                        <option>Qty</option>
+                     
+                
+                      </select>
+                     -->
+                    </div>
+                    </div>
+                    <!-- <div class="col-md-5">
+                    <div class="form-group mb-3">
+                      <label for="">Name</label>
+                      <input type="text" formControlName="exec_name" class="form-control">
+                    
+                    </div>
+                    
+                    </div> -->
+                    </div>
+  
+                    <div class="row">
+                      <div class="col-md-8">
+                    <div class="form-group mb-4">
+                      <label for="">Customer Name</label>
+                      <select  formControlName="enq_cust_name" class="form-control">
+    
+                        //should pull dropdown from customer master
+                          <option>Modern Manufacturing Co.</option>
+                          <option>Innovative Industries Inc.</option>
+                          <option>Reliance Steel & Aluminum Co.</option>
+                          <option>Maruti Suzuki Limited.</option>
+                          <option>Larsent & Toubro Limited.</option>
+                       
+                  
+                        </select>
+                    
+                    </div>
+                    </div>
+                    <!-- <div class="col-md-5">
+                    <div class="form-group mb-3">
+                      <label for="">Name</label>
+                      <input type="text" formControlName="exec_name" class="form-control">
+                    
+                    </div>
+                    
+                    </div> -->
+                    </div>
+  <div class="row">
+  
+     <div class="col-md-4">
+                    <div class="form-group mb-4" >
+                      <label for="">Enquiry Type</label >
+                      <select  formControlName="enq_type" class="form-control" >
+  
+                        //should pull the dropdown from enquiry_type-master
+                        <option>Services</option>
+                        <option>Manufacturing</option>
+                        <option>Trading</option>
+                        <option>Sales</option>
+                        <option>Retail</option>
+  
+                     
+                
+                      </select>
+                    
+                    </div>
+                    
+                    </div>
+  
+  
+    <div class="col-md-4">
+  <div class="form-group mb-4">
+  <label for="">Enquiry Date</label>
+  <input type="date" formControlName="enq_date" class="form-control">
+  
+  </div>
+  </div>
+  
+  
+  
+  </div>
+  
+  
+  <div class="row">
+  
+    <div class="col-md-4">
+                   <div class="form-group mb-4">
+                     <label for="">Enquiry By</label>
+                     <select  formControlName="enq_by" class="form-control">
+                      <option>E-mail</option>
+                      <option>Message</option>
+                      <option>Oral</option>
+                      //should pull dropdown from employee-master
+                      <!-- <option>Sales</option>
+                      <option>Retail</option> -->
+                      </select>
+                   
+                   </div>
+                   
+                   </div>
+  
+  
+   <div class="col-md-4">
+  <div class="form-group mb-4">
+  <label for="">Referred By</label>
+  <input type="text" formControlName="enq_reference" class="form-control">
+    <!-- <option>Amount</option>
+    <option>Qty</option> -->
+  
+  
+  
+  
+  </div>
+  </div>
+  </div>
+  <div class="row">
+  
+    <div class="col-md-4">
+                   <div class="form-group mb-4">
+                     <label for="">Sales Co-ordinator</label>
+                     <select  formControlName="enq_sales_co_ord" class="form-control">
+                      <option>E-mail</option>
+                      <option>Message</option>
+                      <option>Oral</option>
+                      //should pull dropdown from employee-master
+                      <!-- <option>Sales</option>
+                      <option>Retail</option> -->
+                      </select>
+                   
+                   </div>
+                   
+                   </div>
+  
+  
+   <div class="col-md-4">
+  <div class="form-group mb-4">
+  <label for="">Enquiry Status</label>
+  <select  formControlName="status" class="form-control">
+    <!-- //pull dropdown from status master -->
+    <option>Quotable</option>
+    <option>Not Quotable</option>
+  
+  
+  </select>
+  
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+
+  <!-- <div class="container mt-5"> -->
+
+
+
+
+    <div class="row">
+    <div class="col-md-11" >
+     
+ 
+          <div class="card ">
+ 
+             <div class="card-header">
+              
+                <h2 class="text-center"> -- Enquiry LIST --</h2>
+                <!-- <h4>
+                   <a href="enquiry-add" class="btn btn-primary float-end">Add Enquiry</a>&nbsp;
+                 </h4> -->
+                 <br>
+                 <input type="text"  class="form-control" placeholder="search" [(ngModel)]="searchText">
+              
+             </div>
+             
+ 
+             <div class="card-body">
+            
+ 
+                <form action="code1.php" method="POST">
+                    
+ <div class="table-responsive">
+                   <table class="table table-bordered table-striped">
+ 
+                      <thead class="text-center">
+                         <tr>
+                            <th>Model#</th>
+                            <th>Item Name</th>
+                            <th>Item Description</th>
+                            <th>Item Balance</th>
+                            <th>Item Code</th>
+                            <th>Item Sequence</th>
+                            <th>HSN Code</th>
+                            <th>Unit</th>
+                            <th>Quantity</th>
+                            <th>MRP</th>
+                            <th>Rate</th>
+                            <th>Amount</th>
+                            <th>Eff Rate</th>
+                            <th>Eff Value</th>
+                            <th>Net Rate</th>
+                            <th>Discount Rate</th>
+                            <th>Discount Value</th>
+                            <th>Tax Code</th>
+                            <th>Taxable</th>
+                            <th>Tax Rate</th>
+                            <th>Tax Amount</th>
+                            <th>IGST</th>
+                            <th>CGST</th>
+                            <th>SGST</th>
+                            <th>Cess Calculation</th>
+                            <th>Installation Req</th>
+                            <th>Posting GL</th>
+                            <th> Lead Time</th>
+                            <th>Make </th>
+                            <th>Markup</th>
+                            <th>Markup %</th>
+                            <th>Sales Rate</th>
+                            <th>Warranty Months</th>
+
+                           
+                         </tr>
+                      </thead>
+                      <tbody>
+                          <ng-container *ngFor="let enq of enquiry"> 
+                            <tr *ngFor="let item of enq.items" class="text-center">
+                              <td><input type="text" [value]="enq.item_model_no" ></td>
+                              <td><input type="text" [value]="enq.item_name"></td>
+                              <td><input type="text" [value]="enq.item_desc"></td>    
+                              <td><input type="text" [value]="enq.item_balance"></td>
+                              <td><input type="text" [value]="enq.item_code"></td>
+                              <td><input type="text" [value]="enq.item_seq"></td>
+                              <td><input type="text" [value]="enq.item_hsn_code"></td>
+                              <td><input type="text" [value]="enq.item_unit"></td>
+                              <td><input type="text" [value]="enq.item_qty"></td>
+                              <td><input type="text" [value]="enq.item_mrp"></td>
+                              <td><input type="text" [value]="enq.item_rate"></td>
+                              <td><input type="text" [value]="enq.item_amount"></td>
+                              <td><input type="text" [value]="enq.item_eff_rate"></td>
+                              <td><input type="text" [value]="enq.item_eff_value"></td>
+                              <td><input type="text" [value]="enq.item_net_rate"></td>
+                              <td><input type="text" [value]="enq.item_disc"></td>
+                              <td><input type="text" [value]="enq.item_disc_value"></td>
+                              <td><input type="text" [value]="enq.item_tax_code"></td>
+                              <td><input type="text" [value]="enq.item_taxable"></td>
+                              <td><input type="text" [value]="enq.item_tax_rate"></td>
+                              <td><input type="text" [value]="enq.item_tax_amt"></td>
+                              <td><input type="text" [value]="enq.item_igst"></td>
+                              <td><input type="text" [value]="enq.item_cgst"></td>
+                              <td><input type="text" [value]="enq.item_sgst"></td>
+                              <td><input type="text" [value]="enq.item_cess_calc"></td>
+                              <td><input type="text" [value]="enq.item_install_req"></td>
+                              <td><input type="text" [value]="enq.item_posting_gl"></td>
+                              <td><input type="text" [value]="enq.item_lead_time"></td>
+                              <td><input type="text" [value]="enq.item_make"></td>
+                              <td><input type="text" [value]="enq.item_markup"></td>
+                              <td><input type="text" [value]="enq.item_markup_per"></td>
+                              <td><input type="text" [value]="enq.item_sales_rate"></td>
+                              <td><input type="text" [value]="enq.item_war_months"></td> 
+                              
+                             <!-- <td>{{ item.item_model_no }}</td>
+                              <td>{{ item.item_name }}</td>
+                              <td>{{ item.item_desc }}</td>
+                              <td>{{ item.item_balance }}</td>
+                              <td>{{ item.item_code }}</td>
+                              <td> {{item.item_seq}}</td>
+                              <td>{{item.item_hsn_code}}</td>
+                              <td>{{item.item_unit}}</td>
+                              <td>{{item.item_qty}}</td>
+                              <td>{{item.item_mrp}}</td>
+                              <td>{{item.item_rate}}</td>
+                              <td>{{item.item_amount}}</td>
+                              <td>{{item.item_eff_rate}}</td>
+                              <td>{{item.item_eff_value}}</td>
+                              <td>{{item.item_net_rate}}</td>
+                              <td>{{item.item_net_rate}}</td>
+                              <td>{{item.item_disc}}</td>
+                              <td>{{item.item_disc_value}}</td>
+                              <td>{{item.item_tax_code}}</td>
+                              <td>{{item.item_taxable}}</td>
+                              <td>{{item.item_tax_rate}}</td>
+                              <td>{{item.item_tax_amt}}</td>
+                              <td>{{item.item_igst}}</td>
+                              <td>{{item.item_cgst}}</td>
+                              <td>{{item.item_sgst}}</td>
+                              <td>{{item.item_cess_calc}}</td>
+                              <td>{{item.item_install_req}}</td>
+                              <td>{{item.item_posting_gl}}</td>
+                              <td>{{item.item_lead_time}}</td>
+                              <td>{{item.item_make}}</td>
+                              <td>{{item.item_markup}}</td>
+                              <td>{{item.item_markup_per}}</td>
+                              <td>{{item.item_sales_rate}}</td>
+                              <td>{{item.item_war_months}}</td>  -->
+
+
+                               <!-- <td style="color: OrangeRed ">{{enq.status}}</td>
+ 
+                               <td>
+                                <a href="enquiry-edit/{{enq._id}}">
+                                  <mat-icon>edit</mat-icon></a> &nbsp;
+                
+                               
+ 
+                                    <a (click)=" softRoles(enq)">
+                                     <mat-icon>delete</mat-icon></a>
+                                </td> -->
+                              </tr>
+                             </ng-container>    
+    
+    
+                          
+    
+                            
+    
+                         </tbody>
+    
+                      </table>
+                    </div>
+                   </form>
+    
+    
+                </div>
+             </div>
+          </div>
+       </div>
+  <!-- <div class="outer-wrapper">
+    <div class="table-wrapper">
+    <table class="table table-bordered "> -->
+      <!-- <thead class="text-center">
+        <tr>
+          <th>Item Name</th>
+          <th>Code</th>
+          <th>HSN Code</th>
+          <th>Model #</th>
+          <th>Category Name</th>
+          <th>Type</th>
+        </tr>
+      </thead> -->
+    
+      <!-- <tbody *ngFor="let item of getSelectedItems()" class="text-center"> -->
+        
+              <!-- Display item details as needed -->
+              <!-- <td>{{item.item_name}}</td>
+              <td>{{item.item_code}}</td>
+              <td>{{item.item_hsn_code}}</td>
+              <td>{{item.item_model_no}}</td>
+              <td>{{item.item_cat}}</td>
+              <td>{{item.item_type}}</td> -->
+      
+          <!-- <tr *ngFor="let row of selectedRows" class="text-center">
+              <td>{{ row?.item_name }}</td>
+              <td>{{ row?.item_code }}</td>
+              <td>{{ row?.item_hsn_code }}</td>
+              <td>{{ row?.item_model_no }}</td>
+              <td>{{ row?.item_cat }}</td>
+              <td>{{ row?.item_type }}</td>
+            </tr> -->
+      <!-- </tbody> -->
+    <!-- </table>
+    </div>
+    </div><br> -->
+ 
+
+    <!-- <div class="outer-wrapper">
+      <div class="table-wrapper">
+      <table class="table table-bordered ">
+        <thead class="text-center">
+          <tr>
+            <!-- <th>Select Item</th> -->
+            <!-- <th>Model #</th>
+            <th>Item Name</th>
+            <th>Item Description</th>
+            <th>Item Balance</th>
+            <th>Item Code</th>
+            <th>Item Sequence</th>
+            <th>HSN Code</th>
+            <th>Unit</th>
+            <th>Quantity</th>
+            <th>MRP</th>
+            <th>Rate</th>
+            <th>Amount</th>
+            <th>Eff.Rate</th>
+            <th>Eff. Value</th>
+            <th>Net Rate</th>
+            <th>Discount Rate</th>
+            <th>Discount Value</th>
+            <th>Tax Code</th>
+            <th>Taxable</th>
+            <th>Tax Rate</th>
+            <th>Tax Amount</th>
+            <th>IGST</th>
+            <th>CGST</th>
+            <th>SGST</th>
+            <th>Cess Calculation</th>
+            <th>Installation Req.</th>
+            <th>Posting GL</th>
+            <th>Lead Time</th>
+            <th>Make</th>
+            <th>Markup</th>
+            <th>Markup%</th>
+            <th>Sales Rate</th>
+            <th>Warranty/Months</th> -->
+            <!-- <th>Item Name</th>
+            <th>Code</th>
+            <th>HSN Code</th>
+            <th>Model #</th>
+            <th>Category Name</th>
+            <th>Type</th> -->
+          <!-- </tr>
+        </thead> -->
+      
+        <!-- <tbody *ngFor="let item of getSelectedItems()" class="text-center"> -->
+          <!-- <ng-container *ngFor="let enq of enquiry | search: searchText"> -->
+            <!-- <tr *ngFor="let item of enq.items" class="text-center"> -->
+          
+                <!-- Display item details as needed -->
+                <!-- <td>{{item.item_model_no}} -->
+                  <!-- <input type="text" formControlName="item_model_no" [value]="item.item_model_no" [(ngModel)]="item.item_model_no" class="form-control"> -->
+                <!-- </td> -->
+                 <!-- <td>{{item.item_name}} -->
+                  <!-- <input type="text" formControlName="item_name" [value]="item.item_name" [(ngModel)]="item.item_name" class="form-control"> -->
+                <!-- </td> -->
+                 <!-- <td>{{item.item_desc}} -->
+                  <!-- <input type="text" formControlName="item_desc" [value]="item.item_desc" [(ngModel)]="item.item_desc" class="form-control"> -->
+                <!-- </td> -->
+                  <!-- <td>{{item.item_balance}} -->
+                    <!-- <input type="text" formControlName="item_balance" [value]="item.item_balance" [(ngModel)]="item.item_balance" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_code}} -->
+                    <!-- <input type="text" formControlName="item_code" [value]="item.item_code" [(ngModel)]="item.item_code" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_seq}} -->
+                    <!-- <input type="text" formControlName="item_seq" [value]="item.item_seq" [(ngModel)]="item.item_seq" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_hsn_code}} -->
+                    <!-- <input type="text" formControlName="item_hsn_code" [value]="item.item_hsn_code" [(ngModel)]="item.item_hsn_code" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_unit}} -->
+                    <!-- <input type="text" formControlName="item_unit" [value]="item.item_unit" [(ngModel)]="item.item_unit" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_qty}} -->
+                    <!-- <input type="text" formControlName="item_qty" [value]="item.item_qty" [(ngModel)]="item.item_qty" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_mrp}} -->
+                    <!-- <input type="text" formControlName="item_mrp" [value]="item.item_mrp" [(ngModel)]="item.item_mrp" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_rate}} -->
+                    <!-- <input type="text" formControlName="item_rate" [value]="item.item_rate" [(ngModel)]="item.item_rate" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_amount}} -->
+                    <!-- <input type="text" formControlName="item_amount" [value]="item.item_amount" [(ngModel)]="item.item_amount" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_eff_rate}} -->
+                    <!-- <input type="text" formControlName="item_eff_rate" [value]="item.item_eff_rate" [(ngModel)]="item.item_eff_rate" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_eff_value}} -->
+                    <!-- <input type="text" formControlName="item_eff_value" [value]="item.item_eff_value" [(ngModel)]="item.item_eff_value" class="form-control"> -->
+                  <!-- </td> -->
+                  <!-- <td>{{item.item_net_rate}} -->
+                    <!-- <input type="text" formControlName="item_net_rate" [value]="item.item_net_rate" [(ngModel)]="item.item_net_rate" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_disc}} -->
+                    <!-- <input type="text" formControlName="item_disc" [value]="item.item_disc" [(ngModel)]="item.item_disc" class="form-control"> -->
+                  <!-- </td>
+                 <td>{{item.item_disc_value}} -->
+                  <!-- <input type="text" formControlName="item_disc_value" [value]="item.item_disc_value" [(ngModel)]="item.item_disc_value" class="form-control"> -->
+                <!-- </td> 
+                  <td>{{item.item_tax_code}} -->
+                    <!-- <input type="text" formControlName="item_tax_code" [value]="item.item_tax_code" [(ngModel)]="item.item_tax_code" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_taxable}} -->
+                    <!-- <input type="text" formControlName="item_taxable" [value]="item.item_taxable" [(ngModel)]="item.item_taxable" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_tax_rate}} -->
+                    <!-- <input type="text" formControlName="item_tax_rate" [value]="item.item_tax_rate" [(ngModel)]="item.item_tax_rate" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_tax_amt}} -->
+                    <!-- <input type="text" formControlName="item_tax_amt" [value]="item.item_tax_amt" [(ngModel)]="item.item_tax_amt" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_igst}} -->
+                    <!-- <input type="text" formControlName="item_igst" [value]="item.item_igst" [(ngModel)]="item.item_igst" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_cgst}} -->
+                    <!-- <input type="text" formControlName="item_cgst" [value]="item.item_cgst" [(ngModel)]="item.item_cgst" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_sgst}} -->
+                    <!-- <input type="text" formControlName="item_sgst" [value]="item.item_sgst" [(ngModel)]="item.item_sgst" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_cess_calc}} -->
+                    <!-- <input type="text" formControlName="item_cess_calc" [value]="item.item_cess_calc" [(ngModel)]="item.item_cess_calc" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_install_req}} -->
+                    <!-- <input type="text" formControlName="item_install_req" [value]="item.item_install_req" [(ngModel)]="item.item_install_req" class="form-control"> -->
+                  <!-- </td>
+                  <td>{{item.item_posting_gl}} -->
+                    <!-- <input type="text" formControlName="item_posting_gl" [value]="item.item_posting_gl" [(ngModel)]="item.item_posting_gl" class="form-control"> -->
+                  <!-- </td>
+                    <td>{{item.item_lead_time}} -->
+                      <!-- <input type="text" formControlName="item_lead_time" [value]="item.item_lead_time" [(ngModel)]="item.item_lead_time" class="form-control"> -->
+                    <!-- </td>
+                    <td>{{item.item_make}} -->
+                      <!-- <input type="text" formControlName="item_make" [value]="item.item_make" [(ngModel)]="item.item_make" class="form-control"> -->
+                    <!-- </td> -->
+                    <!-- <td>{{item.item_markup}} -->
+                      <!-- <input type="text" formControlName="item_markup" [value]="item.item_markup" [(ngModel)]="item.item_markup" class="form-control"> -->
+                    <!-- </td> -->
+                    <!-- <td>{{item.item_markup_per}} -->
+                      <!-- <input type="text" formControlName="item_markup_per" [value]="item.item_markup_per" [(ngModel)]="item.item_markup_per" class="form-control"> -->
+                    <!-- </td> -->
+                    <!-- <td>{{item.item_sales_rate}} -->
+                      <!-- <input type="text" formControlName="item_sales_rate" [value]="item.item_sales_rate" [(ngModel)]="item.item_sales_rate" class="form-control"> -->
+                    <!-- </td> -->
+                    <!-- <td>{{item.item_war_months}} -->
+                      <!-- <input type="text" formControlName="item_war_months" [value]="item.item_war_months" [(ngModel)]="item.item_war_months" class="form-control"> -->
+                    <!-- </td> -->
+                <!-- <td>{{item.item_name}}</td>
+                <td>{{item.item_code}}</td>
+                <td>{{item.item_hsn_code}}</td>
+                <td>{{item.item_model_no}}</td>
+                <td>{{item.item_cat}}</td>
+                <td>{{item.item_type}}</td> -->
+        
+            <!-- <tr *ngFor="let row of selectedRows" class="text-center">
+                <td>{{ row?.item_name }}</td>
+                <td>{{ row?.item_code }}</td>
+                <td>{{ row?.item_hsn_code }}</td>
+                <td>{{ row?.item_model_no }}</td>
+                <td>{{ row?.item_cat }}</td>
+                <td>{{ row?.item_type }}</td>
+              </tr> -->
+        <!-- </tbody> -->
+      <!-- </tr>
+    </ng-container>   
+      </table>
+      </div>
+      </div><br> -->
+
+  
+<div class="from-group text-center">
+  <button type="submit" (click)="onSubmit()" class="btn btn-success">Update</button>&nbsp;
+  <a class="btn btn-danger" href="enquiry-listt" >Cancel</a>
+  <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+
+</div>
+  <!-- </form> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->

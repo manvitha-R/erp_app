@@ -1,0 +1,30 @@
+.card {
+    /* Ensure the card container expands to fit its content */
+    display: inline-block;
+    width: 100%;
+  }
+  .card-body {
+    /* Limit the height of the card body to make it scrollable if necessary */
+    max-height: 400px; /* Adjust the value as needed */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+  }
+  
+  .table {
+    width: 100%;
+    // border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Style checkbox alignment */
+.text-center input[type="checkbox"] {
+    margin: auto;
+  }
+
+//   .popup-card {
+//     width: 80%; /* Adjust the width as needed */
+// }

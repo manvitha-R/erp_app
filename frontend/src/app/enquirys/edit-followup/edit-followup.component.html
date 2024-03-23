@@ -1,0 +1,282 @@
+<div class="py-10">
+  <div class="container">
+      <div class="row justify-content-center">
+  
+          <div class="col-md-18">
+      
+             <div class="card shadow">
+        
+              <div class="card-header">
+                  <h2 class="text-center">-- Enquiry --</h2>
+              </div>
+              <div class="card-body">
+                <form  [formGroup]="addfollow_up" novalidate class="form">
+
+                  <div class="row">
+                    <div class="col-md-4">
+                  <div class="form-group mb-4">
+                  <label for="">Enquiry On</label>
+                  <input type="text" formControlName="enq_on" class="form-control" readonly>
+                  <!-- <select  formControlName="enq_on" class="form-control">
+                      <option>Amount</option>
+                      <option>Qty</option>
+                   
+              
+                    </select> -->
+                  
+                  </div>
+                  </div>
+                  <!-- <div class="col-md-5">
+                  <div class="form-group mb-3">
+                    <label for="">Name</label>
+                    <input type="text" formControlName="exec_name" class="form-control">
+                  
+                  </div>
+                  
+                  </div> -->
+                  </div>
+<div class="row">
+
+   <div class="col-md-4">
+                  <div class="form-group mb-4">
+                    <label for="">Enquiry By</label>
+                    <input type="text" formControlName="enq_by" class="form-control" readonly>
+                    <!-- <select  formControlName="enq_by" class="form-control">
+                      <option>Amount</option>
+                      <option>Qty</option>
+                   
+              
+                    </select> -->
+                  
+                  </div>
+                  
+                  </div>
+
+
+  <div class="col-md-4">
+<div class="form-group mb-4">
+<label for="">Enquiry Date</label>
+<input type="date" formControlName="enq_date" class="form-control" readonly>
+
+</div>
+</div>
+
+
+
+</div>
+
+
+<div class="row">
+
+  <div class="col-md-4">
+                 <div class="form-group mb-4">
+                   <label for="">Reference</label>
+                   <input type="text" formControlName="enq_reference" class="form-control" readonly>
+                 
+                 </div>
+                 
+                 </div>
+
+
+ <div class="col-md-4">
+<div class="form-group mb-4">
+<label for="">Sales Co-ordinator</label>
+<input type="text" formControlName="enq_sales_co_ord" class="form-control" readonly>
+<!-- <select  formControlName="enq_sales_co_ord" class="form-control">
+  <option>Amount</option>
+  <option>Qty</option>
+
+
+</select> -->
+
+</div>
+</div>
+
+<div class="col-md-3">
+  <div class="form-group mb-4">
+  <label for="">Status</label>
+  <input type="text" formControlName="status" class="form-control" readonly>
+
+  
+  </div>
+  </div>
+
+
+  <hr>
+<div class="outer-wrapper">
+<div class="table-wrapper">
+<table class="table table-bordered ">
+
+<thead class="text-center">
+   <tr class="table-success" >
+    
+    <th>Item Name</th>
+    <th>Code</th>
+    <th>HSN Code</th>
+    <th>Model #</th>
+    <th>Category Name</th>
+    <th>Type</th>
+   
+</thead>
+<tbody>
+   
+  <!-- <tr>
+    <tr  class="text-center">
+      <td>1</td>
+      <td>abc</td>
+      <td>siudhhhhhhhhhhhhhhhhhhhhhhh</td>
+      <td>1idu</td>
+      <td>udd</td>
+      <td>ooo</td>
+      <td>ee</td>
+      <td>eejek</td>
+      <td>wer</td>
+      <td>ddk</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+      <td>iidj</td>
+  
+     
+        
+
+    
+        
+         </tr> -->
+
+</tbody>
+
+</table>
+
+</div>
+</div><br>
+
+  <!-- <div class="py-10"> -->
+    <div class="container">
+        <div class="row justify-content-center">
+    
+            <div class="col-md-18">
+        
+               <div class="card shadow">
+          
+                <div class="card-header">
+                    <h2 class="text-center">-- Follow-Up --</h2>
+                </div><br>
+                <div class="container text-center">
+                  <div class="row justify-content-center">
+                    <div class="col-md-8">
+  <div class="row">
+     <div class="col-md-1 form-group">
+      <div class="form-group mb-4"> 
+         <!-- <tr  let index = index">
+        <td>{{$index + 1}}</td>
+      </tr> -->
+       <input matInput="number" placeholder="Sl.No"  formControlName="sl_no" class="form-control">
+    </div>
+  </div> 
+
+<!-- <div class="col-md-1 form-group">
+  <button (click)="incrementSerialNumber()" placeholder="sl_no" [(ngModel)]="serialnumber" formControlName="sl_no" class="form-control"></button>
+</div> -->
+<!-- <button (click)="incrementSerialNumber()">Sl No.</button> -->
+    <div class="col-md-3 form-group">
+        <input matInput placeholder="Person_name" formControlName="person_name" class="form-control">
+    </div>
+    <div class="col-md-3 form-group">
+        <input matInput type="date" placeholder="Date" formControlName="date" class="form-control">
+    </div>
+    <div class="col-md-5 form-group">
+        <input matInput placeholder="Remarks" formControlName="remarks" class="form-control">
+    </div>
+  </div>
+</div>
+</div>
+&nbsp;
+    <!-- </div>&nbsp; -->
+    <!-- <button type="button" (click)="addNewRow()" [disabled]="FormGroup.invalid" class="btn btn-primary">
+                    <mat-icon>add</mat-icon>
+                </button> -->
+
+  <div class="from-group text-center">
+      <button type="submit" (click)="onSubmit()" class="btn btn-success">Save</button>&nbsp;
+      
+      <a class="btn btn-primary" href="history" >History</a>&nbsp;
+      <a class="btn btn-danger" href="list-followup" >Cancel</a>
+
+      <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<!-- <form novalidate [formGroup]="FormGroup" >
+<div class="row">
+    <div class="col-xs-12">
+        <div formGroupName="itemRows">
+       
+        <div  *ngIf="FormGroup.controls.itemRows!=null">
+            <div *ngFor="let itemrow of FormGroup.controls.itemRows.controls; let i=index" [formGroupName]="i">
+                <div class="row">
+                    <div class="col-md-2 form-group">
+                        <input matInput placeholder="Sl.No" formControlName="sl_no" class="form-control">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <input matInput placeholder="Person_name" formControlName="person_name" class="form-control">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <input matInput placeholder="Date" formControlName="date" class="form-control">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <input matInput placeholder="Remarks" formControlName="remarks" class="form-control">
+                    </div>
+
+
+                <div class="col-md-4 from-group">
+                    <button (click)="deleteRow(i)" class="btn btn-danger">
+                        <mat-icon>delete</mat-icon>
+                    </button>&nbsp;
+
+                    
+                        <button type="button" (click)="addNewRow()" [disabled]="FormGroup.invalid" class="btn btn-primary">
+                            <mat-icon>add</mat-icon>
+                        </button>&nbsp;
+                         <button type="button" (click)="onSubmit()" class="btn btn-success">
+                            <mat-icon>save</mat-icon>
+                        </button><br>&nbsp; -->
+                    
+
+                        
+                <!-- </div>
+              
+        </div>
+        
+            </div>
+            <div class="from-group text-center">
+              <button type="submit" (click)="onSubmit()" class="btn btn-success">Save</button>&nbsp;
+              <a class="btn btn-danger" href="list-followup" >Cancel</a> --> 
+              <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</form>
+
+</div>

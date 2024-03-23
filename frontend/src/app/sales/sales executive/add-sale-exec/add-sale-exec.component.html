@@ -1,0 +1,126 @@
+
+<div class="py-10">
+    <div class="container">
+        <div class="row justify-content-center">
+    
+            <div class="col-md-6">
+        
+               <div class="card shadow">
+          
+                <div class="card-header">
+                    <h2 class="text-center">-- Sales Exexutive --</h2>
+                </div>
+                <div class="card-body">
+                  <form  [formGroup]="addexecutive" novalidate class="form">
+  
+                    <div class="row">
+                      <div class="col-md-6">
+                    <div class="form-group mb-3">
+                    <label for="">Code</label>
+                    <input type="text" formControlName="exec_code" class="form-control">
+                    
+                    </div>
+                    </div>
+                    <!-- <div class="col-md-5">
+                    <div class="form-group mb-3">
+                      <label for="">Name</label>
+                      <input type="text" formControlName="exec_name" class="form-control">
+                    
+                    </div>
+                    
+                    </div> -->
+                    </div>
+  <div class="row">
+
+     <div class="col-md-6">
+                    <div class="form-group mb-3">
+                      <label for="">Name</label>
+                      <input type="text" formControlName="exec_name" class="form-control">
+                    
+                    </div>
+                    
+                    </div>
+
+
+    <div class="col-md-6">
+  <div class="form-group mb-3">
+  <label for="">Commission Rate</label>
+  <input type="text" formControlName="exec_commission" class="form-control">
+  
+  </div>
+  </div>
+  
+  
+  
+  </div>
+  
+  
+  <div class="row">
+    <div class="col-md-6">
+        <div class="form-group mb-3">
+          <label for="">Rate On</label>
+          <select  formControlName="exec_rateon" class="form-control">
+              <option>Amount</option>
+              <option>Qty</option>
+           
+      
+            </select>
+        
+        </div>
+        
+        </div>
+        <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="">Amount Type</label>
+              <select  formControlName="exec_amount" class="form-control">
+                  <option>Taxable</option>
+                  <option>Bill Amount</option>
+               
+          
+                </select>
+            
+            </div>
+            
+            </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-6">
+                   <div class="form-group mb-3">
+                     <label for="">Email</label>
+                     <input type="email" formControlName="exec_email" class="form-control">
+                   
+                   </div>
+                   
+                   </div>
+
+
+   <div class="col-md-6">
+ <div class="form-group mb-3">
+ <label for="">Phone</label>
+ <input type="text" formControlName="exec_phone" class="form-control">
+ 
+ </div>
+ </div>
+ 
+ 
+ 
+ </div>
+ 
+ 
+  
+    <div class="from-group text-center">
+      <button type="submit" (click)="onSubmit()" class="btn btn-success">Save</button>&nbsp;
+      <a class="btn btn-danger" href="list-exec" >Cancel</a>
+      <!-- <a href="password-reset.php" class="float-end">Forgot Your Password?</a> -->
+    </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+    
+      
